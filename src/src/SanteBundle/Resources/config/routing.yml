@@ -1,0 +1,85 @@
+sante_home:
+    path:     /
+    defaults: { _controller: SanteBundle:Home:home }
+sante_services:
+    path:     /Services
+    defaults: { _controller: SanteBundle:Services:Services }
+
+sante_doctors:
+    path:     /Doctors
+    defaults: { _controller: SanteBundle:Doctors:Doctors }
+sante_timetable:
+    path:     /Timetable
+    defaults: { _controller: SanteBundle:Timetable:Timetable }
+
+sante_forum:
+    path:     /Forum
+    defaults: { _controller: SanteBundle:Forum:Forum }
+
+sante_articles:
+    path:     /Articles
+    defaults: { _controller: SanteBundle:Articles:Articles }
+
+sante_shop:
+    path:     /Shop
+    defaults: { _controller: SanteBundle:Shop:Shop }
+
+sante_locate:
+    path:     /Locate
+    defaults: { _controller: SanteBundle:Locate:List }
+
+sante_Route:
+    path:     /Route/{id}
+    defaults: { _controller: SanteBundle:Locate:Route }
+
+sante_AddLocate:
+    path:     /AddLocate
+    defaults: { _controller: SanteBundle:Locate:Locate }
+
+sante_index:
+    path:     /admin/stat1
+    defaults: { _controller: SanteBundle:Home:index }
+sante_index2:
+    path:     /stat2
+    defaults: { _controller: SanteBundle:Home:index2 }
+
+sante_index3:
+    path:     /stat3
+    defaults: { _controller: SanteBundle:Home:index3 }
+
+sante_GestionProduit:
+    path:     /ShopAdmin
+    defaults: { _controller: SanteBundle:Shop:ShopAdmin }
+
+sante_AdminLocate:
+    path:     /LocateAdmin
+    defaults: { _controller: SanteBundle:Locate:LocateAdmin }
+
+sante_AdminAddLocate:
+    path:     /AddLocateAdmin
+    defaults: { _controller: SanteBundle:Locate:AddLocateAdmin }
+
+sante_AdminUpdateLocate:
+    path:     /UpdateLocateAdmin/{id}
+    defaults: { _controller: SanteBundle:Locate:UpdateLocateAdmin }
+
+sante_AdminDeleteLocate:
+    path:     /DeleteLocateAdmin/{id}
+    defaults: { _controller: SanteBundle:Locate:DeleteLocateAdmin}
+
+sante_GestionArticles:
+    path:     /ArticlesAdmin
+    defaults: { _controller: SanteBundle:Articles:ArticlesAdmin }
+
+sante_ListeMembres:
+    path:     /ListemembresAdmin
+    defaults: { _controller: SanteBundle:Doctors:Listemembres }
+
+sante_ProfileMembres:
+    path:     /ProfilemembresAdmin
+    defaults: { _controller: SanteBundle:Doctors:Profilemembres }
+
+sante_Filter:
+    path:     /FilterAdmin
+    defaults: { _controller: SanteBundle:Forum:Filter }
+
