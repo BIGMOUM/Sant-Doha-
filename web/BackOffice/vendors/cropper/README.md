@@ -861,7 +861,7 @@ $().cropper('getCroppedCanvas').toBlob(function (blob) {
 
   formData.append('croppedImage', blob);
 
-  $.ajax('/path/to/upload', {
+  $.ajax(uploads, {
     method: "POST",
     data: formData,
     processData: false,

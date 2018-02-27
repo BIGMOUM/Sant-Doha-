@@ -18,6 +18,8 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new SanteBundle\SanteBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new blackknight467\StarRatingBundle\StarRatingBundle(),
+            new Mgilet\NotificationBundle\MgiletNotificationBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

@@ -18,6 +18,9 @@
     <link href="{{asset('BackOffice/vendors/nprogress/nprogress.css')}}" rel="stylesheet">
     <!-- iCheck -->
     <link href="{{asset('BackOffice/vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
 
     <!-- bootstrap-progressbar -->
     <link href="{{asset('BackOffice/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet">
@@ -75,13 +78,19 @@
                     <div class="menu_section">
                         <h3>Live On</h3>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-bug"></i> Gestion <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-gears"></i> Gestion <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="{{ path('sante_GestionProduit') }}">E-commerce</a></li>
                                     <li><a href="{{ path('sante_GestionArticles') }}">Articles&Events</a></li>
                                     <li><a href="{{ path('sante_Filter') }}">Filter</a></li>
                                     <li><a href="{{ path('sante_ListeMembres') }}">Memebers List</a></li>
                                     <li><a href="{{ path('sante_ProfileMembres') }}">Memeber Profile</a></li>
+                                    <li><a><i class="fa fa-globe"></i> Map <span class="fa fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu">
+                                                    <li><a href="{{ path('sante_AdminLocate') }}">Locate Establishment</a></li>
+                                                    <li><a href="{{ path('sante_AdminAddLocate') }}">Add Establishment</a></li>
+                                                </ul>
+                                    </li>
                                 </ul>
                             </li>
                             <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>

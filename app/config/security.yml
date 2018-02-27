@@ -14,7 +14,8 @@ security:
     role_hierarchy:
         ROLE_MEMBRE:       ROLE_USER
         ROLE_DOCTOR:       ROLE_USER
-        ROLE_SUPER_ADMIN: ROLE_ADMIN
+        ROLE_ADMIN:        ROLE_ADMIN
+        ROLE_SUPER_ADMIN:  ROLE_ADMIN
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -23,11 +24,12 @@ security:
             security: false
 
         main:
-            anonymous: ~
             pattern: ^/
             form_login:
                 provider: fos_userbundle
                 csrf_token_generator: security.csrf.token_manager
+                success_handler: redirect.after.login
+
 
             logout:       true
             anonymous:    true

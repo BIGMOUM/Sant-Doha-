@@ -21,6 +21,10 @@
     <link href="{{ asset('css/component.css')}}" rel="stylesheet">
     <script src="{{ asset('js/modernizr.custom.js')}}">
     </script><!-- Multi Level Push Menu -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+
     <!-- REVOLUTION STYLE SHEETS -->
     <link href="{{ asset('js/revslider/settings.css')}}" rel="stylesheet" type="text/css">
     <link href="{{ asset('js/revslider/layers.css')}}" rel="stylesheet" type="text/css">
@@ -223,8 +227,43 @@
                             <li>
                                 <a href="{{ path('sante_shop') }}">SHOP</a>
                             </li>
-                            <li>
-                                <a href="{{ path('sante_locate') }}">LOCATE</a>
+                            <li class="dropdown yamm-fw">
+                                <a class="dropdown-toggle" href="{{ path('sante_locate') }}">LOCATE</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <!-- Content container to add padding -->
+                                        <div class="yamm-content">
+                                            <div class="row">
+                                                <ul class="col-md-6 list-unstyled">
+                                                    <li>
+                                                        <a class="mega-menu-title" href="#">ESTABLISHMENT</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ path('sante_locate') }}">View Establishments</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ path('sante_AddLocate') }}">Add Establishment</a>
+                                                    </li>
+
+                                                </ul><!--/.col-md-3-->
+                                                <ul class="col-md-6 list-unstyled">
+                                                    <li>
+                                                        <a class="mega-menu-title" href="#">CATEGORY 2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Additional Treatments</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Orthodontics</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Dentures & Denture Repair</a>
+                                                    </li>
+                                                </ul><!--/.col-md-3-->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </li>
                         </ul><!--/.nav navbar-nav-->
                     </div><!-- Desktop Navigation List End -->

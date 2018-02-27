@@ -26,10 +26,18 @@ sante_shop:
 
 sante_locate:
     path:     /Locate
+    defaults: { _controller: SanteBundle:Locate:List }
+
+sante_Route:
+    path:     /Route/{id}
+    defaults: { _controller: SanteBundle:Locate:Route }
+
+sante_AddLocate:
+    path:     /AddLocate
     defaults: { _controller: SanteBundle:Locate:Locate }
 
 sante_index:
-    path:     /stat1
+    path:     /admin/stat1
     defaults: { _controller: SanteBundle:Home:index }
 sante_index2:
     path:     /stat2
@@ -42,6 +50,22 @@ sante_index3:
 sante_GestionProduit:
     path:     /ShopAdmin
     defaults: { _controller: SanteBundle:Shop:ShopAdmin }
+
+sante_AdminLocate:
+    path:     /LocateAdmin
+    defaults: { _controller: SanteBundle:Locate:LocateAdmin }
+
+sante_AdminAddLocate:
+    path:     /AddLocateAdmin
+    defaults: { _controller: SanteBundle:Locate:AddLocateAdmin }
+
+sante_AdminUpdateLocate:
+    path:     /UpdateLocateAdmin/{id}
+    defaults: { _controller: SanteBundle:Locate:UpdateLocateAdmin }
+
+sante_AdminDeleteLocate:
+    path:     /DeleteLocateAdmin/{id}
+    defaults: { _controller: SanteBundle:Locate:DeleteLocateAdmin}
 
 sante_GestionArticles:
     path:     /ArticlesAdmin
@@ -58,3 +82,4 @@ sante_ProfileMembres:
 sante_Filter:
     path:     /FilterAdmin
     defaults: { _controller: SanteBundle:Forum:Filter }
+
