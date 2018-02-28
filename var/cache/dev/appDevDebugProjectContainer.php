@@ -22,7 +22,7 @@ class appDevDebugProjectContainer extends Container
     public function __construct()
     {
         $dir = __DIR__;
-        for ($i = 1; $i <= 4; ++$i) {
+        for ($i = 1; $i <= 5; ++$i) {
             $this->targetDirs[$i] = $dir = dirname($dir);
         }
         $this->parameters = $this->getDefaultParameters();
@@ -30,10 +30,11 @@ class appDevDebugProjectContainer extends Container
         $this->services = array();
         $this->normalizedIds = array(
             'appbundle\\controller\\defaultcontroller' => 'AppBundle\\Controller\\DefaultController',
+            'knp\\component\\pager\\paginatorinterface' => 'Knp\\Component\\Pager\\PaginatorInterface',
         );
         $this->methodMap = array(
-            '1_eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfe' => 'get1Eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfeService',
-            '2_eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfe' => 'get2Eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfeService',
+            '1_0f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7' => 'get10f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7Service',
+            '2_0f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7' => 'get20f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7Service',
             'AppBundle\\Controller\\DefaultController' => 'getAppBundle_Controller_DefaultControllerService',
             'annotation_reader' => 'getAnnotationReaderService',
             'annotations.cache' => 'getAnnotations_CacheService',
@@ -207,6 +208,13 @@ class appDevDebugProjectContainer extends Container
             'fragment.renderer.inline' => 'getFragment_Renderer_InlineService',
             'http_kernel' => 'getHttpKernelService',
             'kernel.class_cache.cache_warmer' => 'getKernel_ClassCache_CacheWarmerService',
+            'knp_paginator' => 'getKnpPaginatorService',
+            'knp_paginator.helper.processor' => 'getKnpPaginator_Helper_ProcessorService',
+            'knp_paginator.subscriber.filtration' => 'getKnpPaginator_Subscriber_FiltrationService',
+            'knp_paginator.subscriber.paginate' => 'getKnpPaginator_Subscriber_PaginateService',
+            'knp_paginator.subscriber.sliding_pagination' => 'getKnpPaginator_Subscriber_SlidingPaginationService',
+            'knp_paginator.subscriber.sortable' => 'getKnpPaginator_Subscriber_SortableService',
+            'knp_paginator.twig.extension.pagination' => 'getKnpPaginator_Twig_Extension_PaginationService',
             'locale_listener' => 'getLocaleListenerService',
             'logger' => 'getLoggerService',
             'mgilet.notification' => 'getMgilet_NotificationService',
@@ -318,6 +326,20 @@ class appDevDebugProjectContainer extends Container
             'validator.expression' => 'getValidator_ExpressionService',
             'var_dumper.cli_dumper' => 'getVarDumper_CliDumperService',
             'var_dumper.cloner' => 'getVarDumper_ClonerService',
+            'vich_uploader.directory_namer_subdir' => 'getVichUploader_DirectoryNamerSubdirService',
+            'vich_uploader.download_handler' => 'getVichUploader_DownloadHandlerService',
+            'vich_uploader.form.type.file' => 'getVichUploader_Form_Type_FileService',
+            'vich_uploader.form.type.image' => 'getVichUploader_Form_Type_ImageService',
+            'vich_uploader.metadata_reader' => 'getVichUploader_MetadataReaderService',
+            'vich_uploader.namer_hash' => 'getVichUploader_NamerHashService',
+            'vich_uploader.namer_origname' => 'getVichUploader_NamerOrignameService',
+            'vich_uploader.namer_property' => 'getVichUploader_NamerPropertyService',
+            'vich_uploader.namer_uniqid' => 'getVichUploader_NamerUniqidService',
+            'vich_uploader.namer_uniqid.devis' => 'getVichUploader_NamerUniqid_DevisService',
+            'vich_uploader.property_mapping_factory' => 'getVichUploader_PropertyMappingFactoryService',
+            'vich_uploader.storage' => 'getVichUploader_StorageService',
+            'vich_uploader.templating.helper.uploader_helper' => 'getVichUploader_Templating_Helper_UploaderHelperService',
+            'vich_uploader.upload_handler' => 'getVichUploader_UploadHandlerService',
             'web_profiler.controller.exception' => 'getWebProfiler_Controller_ExceptionService',
             'web_profiler.controller.profiler' => 'getWebProfiler_Controller_ProfilerService',
             'web_profiler.controller.router' => 'getWebProfiler_Controller_RouterService',
@@ -325,8 +347,8 @@ class appDevDebugProjectContainer extends Container
             'web_profiler.debug_toolbar' => 'getWebProfiler_DebugToolbarService',
         );
         $this->privates = array(
-            '1_eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfe' => true,
-            '2_eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfe' => true,
+            '1_0f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7' => true,
+            '2_0f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7' => true,
             'annotations.cache' => true,
             'annotations.reader' => true,
             'argument_resolver.default' => true,
@@ -383,9 +405,12 @@ class appDevDebugProjectContainer extends Container
             'session.storage.metadata_bag' => true,
             'swiftmailer.mailer.default.transport.eventdispatcher' => true,
             'templating.locator' => true,
+            'vich_uploader.metadata_reader' => true,
+            'vich_uploader.property_mapping_factory' => true,
             'web_profiler.csp.handler' => true,
         );
         $this->aliases = array(
+            'Knp\\Component\\Pager\\PaginatorInterface' => 'knp_paginator',
             'cache.app_clearer' => 'cache.default_clearer',
             'database_connection' => 'doctrine.dbal.default_connection',
             'doctrine.orm.default_metadata_cache' => 'doctrine_cache.providers.doctrine.orm.default_metadata_cache',
@@ -551,8 +576,8 @@ class appDevDebugProjectContainer extends Container
     protected function getConfigCacheFactoryService()
     {
         return $this->services['config_cache_factory'] = new \Symfony\Component\Config\ResourceCheckerConfigCacheFactory(new RewindableGenerator(function () {
-            yield 0 => ${($_ = isset($this->services['1_eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfe']) ? $this->services['1_eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfe'] : $this->get1Eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfeService()) && false ?: '_'};
-            yield 1 => ${($_ = isset($this->services['2_eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfe']) ? $this->services['2_eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfe'] : $this->get2Eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfeService()) && false ?: '_'};
+            yield 0 => ${($_ = isset($this->services['1_0f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7']) ? $this->services['1_0f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7'] : $this->get10f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7Service()) && false ?: '_'};
+            yield 1 => ${($_ = isset($this->services['2_0f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7']) ? $this->services['2_0f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7'] : $this->get20f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7Service()) && false ?: '_'};
         }, 2));
     }
 
@@ -716,6 +741,9 @@ class appDevDebugProjectContainer extends Container
         $instance->addListener('kernel.controller', array(0 => function () {
             return ${($_ = isset($this->services['data_collector.router']) ? $this->services['data_collector.router'] : $this->get('data_collector.router')) && false ?: '_'};
         }, 1 => 'onKernelController'), 0);
+        $instance->addListener('kernel.request', array(0 => function () {
+            return ${($_ = isset($this->services['knp_paginator.subscriber.sliding_pagination']) ? $this->services['knp_paginator.subscriber.sliding_pagination'] : $this->get('knp_paginator.subscriber.sliding_pagination')) && false ?: '_'};
+        }, 1 => 'onKernelRequest'), 0);
         $instance->addListener('kernel.response', array(0 => function () {
             return ${($_ = isset($this->services['response_listener']) ? $this->services['response_listener'] : $this->get('response_listener')) && false ?: '_'};
         }, 1 => 'onKernelResponse'), 0);
@@ -765,6 +793,9 @@ class appDevDebugProjectContainer extends Container
             return ${($_ = isset($this->services['data_collector.request']) ? $this->services['data_collector.request'] : $this->get('data_collector.request')) && false ?: '_'};
         }, 1 => 'onKernelResponse'), 0);
         $instance->addListener('kernel.request', array(0 => function () {
+            return ${($_ = isset($this->services['debug.debug_handlers_listener']) ? $this->services['debug.debug_handlers_listener'] : $this->get('debug.debug_handlers_listener')) && false ?: '_'};
+        }, 1 => 'configure'), 2048);
+        $instance->addListener('console.command', array(0 => function () {
             return ${($_ = isset($this->services['debug.debug_handlers_listener']) ? $this->services['debug.debug_handlers_listener'] : $this->get('debug.debug_handlers_listener')) && false ?: '_'};
         }, 1 => 'configure'), 2048);
         $instance->addListener('kernel.request', array(0 => function () {
@@ -875,6 +906,21 @@ class appDevDebugProjectContainer extends Container
         $instance->addListener('kernel.response', array(0 => function () {
             return ${($_ = isset($this->services['web_profiler.debug_toolbar']) ? $this->services['web_profiler.debug_toolbar'] : $this->get('web_profiler.debug_toolbar')) && false ?: '_'};
         }, 1 => 'onKernelResponse'), -128);
+        $instance->addListener('knp_pager.before', array(0 => function () {
+            return ${($_ = isset($this->services['knp_paginator.subscriber.paginate']) ? $this->services['knp_paginator.subscriber.paginate'] : $this->get('knp_paginator.subscriber.paginate')) && false ?: '_'};
+        }, 1 => 'before'), 0);
+        $instance->addListener('knp_pager.pagination', array(0 => function () {
+            return ${($_ = isset($this->services['knp_paginator.subscriber.paginate']) ? $this->services['knp_paginator.subscriber.paginate'] : $this->get('knp_paginator.subscriber.paginate')) && false ?: '_'};
+        }, 1 => 'pagination'), 0);
+        $instance->addListener('knp_pager.before', array(0 => function () {
+            return ${($_ = isset($this->services['knp_paginator.subscriber.sortable']) ? $this->services['knp_paginator.subscriber.sortable'] : $this->get('knp_paginator.subscriber.sortable')) && false ?: '_'};
+        }, 1 => 'before'), 1);
+        $instance->addListener('knp_pager.before', array(0 => function () {
+            return ${($_ = isset($this->services['knp_paginator.subscriber.filtration']) ? $this->services['knp_paginator.subscriber.filtration'] : $this->get('knp_paginator.subscriber.filtration')) && false ?: '_'};
+        }, 1 => 'before'), 1);
+        $instance->addListener('knp_pager.pagination', array(0 => function () {
+            return ${($_ = isset($this->services['knp_paginator.subscriber.sliding_pagination']) ? $this->services['knp_paginator.subscriber.sliding_pagination'] : $this->get('knp_paginator.subscriber.sliding_pagination')) && false ?: '_'};
+        }, 1 => 'pagination'), 1);
 
         return $instance;
     }
@@ -1042,18 +1088,26 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getDoctrine_Dbal_DefaultConnectionService()
     {
-        $a = new \Doctrine\DBAL\Logging\LoggerChain();
-        $a->addLogger(new \Symfony\Bridge\Doctrine\Logger\DbalLogger(${($_ = isset($this->services['monolog.logger.doctrine']) ? $this->services['monolog.logger.doctrine'] : $this->get('monolog.logger.doctrine', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'}, ${($_ = isset($this->services['debug.stopwatch']) ? $this->services['debug.stopwatch'] : $this->get('debug.stopwatch', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'}));
-        $a->addLogger(${($_ = isset($this->services['doctrine.dbal.logger.profiling.default']) ? $this->services['doctrine.dbal.logger.profiling.default'] : $this->getDoctrine_Dbal_Logger_Profiling_DefaultService()) && false ?: '_'});
+        $a = ${($_ = isset($this->services['vich_uploader.metadata_reader']) ? $this->services['vich_uploader.metadata_reader'] : $this->getVichUploader_MetadataReaderService()) && false ?: '_'};
+        $b = ${($_ = isset($this->services['vich_uploader.upload_handler']) ? $this->services['vich_uploader.upload_handler'] : $this->get('vich_uploader.upload_handler')) && false ?: '_'};
 
-        $b = new \Doctrine\DBAL\Configuration();
-        $b->setSQLLogger($a);
+        $c = new \Doctrine\DBAL\Logging\LoggerChain();
+        $c->addLogger(new \Symfony\Bridge\Doctrine\Logger\DbalLogger(${($_ = isset($this->services['monolog.logger.doctrine']) ? $this->services['monolog.logger.doctrine'] : $this->get('monolog.logger.doctrine', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'}, ${($_ = isset($this->services['debug.stopwatch']) ? $this->services['debug.stopwatch'] : $this->get('debug.stopwatch', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'}));
+        $c->addLogger(${($_ = isset($this->services['doctrine.dbal.logger.profiling.default']) ? $this->services['doctrine.dbal.logger.profiling.default'] : $this->getDoctrine_Dbal_Logger_Profiling_DefaultService()) && false ?: '_'});
 
-        $c = new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this);
-        $c->addEventSubscriber(new \FOS\UserBundle\Doctrine\UserListener(${($_ = isset($this->services['fos_user.util.password_updater']) ? $this->services['fos_user.util.password_updater'] : $this->getFosUser_Util_PasswordUpdaterService()) && false ?: '_'}, ${($_ = isset($this->services['fos_user.util.canonical_fields_updater']) ? $this->services['fos_user.util.canonical_fields_updater'] : $this->getFosUser_Util_CanonicalFieldsUpdaterService()) && false ?: '_'}));
-        $c->addEventListener(array(0 => 'loadClassMetadata'), ${($_ = isset($this->services['doctrine.orm.default_listeners.attach_entity_listeners']) ? $this->services['doctrine.orm.default_listeners.attach_entity_listeners'] : $this->get('doctrine.orm.default_listeners.attach_entity_listeners')) && false ?: '_'});
+        $d = new \Doctrine\DBAL\Configuration();
+        $d->setSQLLogger($c);
 
-        return $this->services['doctrine.dbal.default_connection'] = ${($_ = isset($this->services['doctrine.dbal.connection_factory']) ? $this->services['doctrine.dbal.connection_factory'] : $this->get('doctrine.dbal.connection_factory')) && false ?: '_'}->createConnection(array('driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => NULL, 'dbname' => 'SantePI', 'user' => 'root', 'password' => NULL, 'charset' => 'UTF8', 'driverOptions' => array(), 'defaultTableOptions' => array()), $b, $c, array());
+        $e = new \Vich\UploaderBundle\Adapter\ORM\DoctrineORMAdapter();
+
+        $f = new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this);
+        $f->addEventSubscriber(new \Vich\UploaderBundle\EventListener\Doctrine\CleanListener('devis', $e, $a, $b));
+        $f->addEventSubscriber(new \FOS\UserBundle\Doctrine\UserListener(${($_ = isset($this->services['fos_user.util.password_updater']) ? $this->services['fos_user.util.password_updater'] : $this->getFosUser_Util_PasswordUpdaterService()) && false ?: '_'}, ${($_ = isset($this->services['fos_user.util.canonical_fields_updater']) ? $this->services['fos_user.util.canonical_fields_updater'] : $this->getFosUser_Util_CanonicalFieldsUpdaterService()) && false ?: '_'}));
+        $f->addEventSubscriber(new \Vich\UploaderBundle\EventListener\Doctrine\RemoveListener('devis', $e, $a, $b));
+        $f->addEventSubscriber(new \Vich\UploaderBundle\EventListener\Doctrine\UploadListener('devis', $e, $a, $b));
+        $f->addEventListener(array(0 => 'loadClassMetadata'), ${($_ = isset($this->services['doctrine.orm.default_listeners.attach_entity_listeners']) ? $this->services['doctrine.orm.default_listeners.attach_entity_listeners'] : $this->get('doctrine.orm.default_listeners.attach_entity_listeners')) && false ?: '_'});
+
+        return $this->services['doctrine.dbal.default_connection'] = ${($_ = isset($this->services['doctrine.dbal.connection_factory']) ? $this->services['doctrine.dbal.connection_factory'] : $this->get('doctrine.dbal.connection_factory')) && false ?: '_'}->createConnection(array('driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => NULL, 'dbname' => 'SantePI', 'user' => 'root', 'password' => NULL, 'charset' => 'UTF8', 'driverOptions' => array(), 'defaultTableOptions' => array()), $d, $f, array());
     }
 
     /**
@@ -1304,7 +1358,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_metadata_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf_orm_default_867f2de982b34cfd13fc8aaa19be1f45af32265a7104a32d2623d123b8f898da');
+        $instance->setNamespace('sf_orm_default_ee4e005e8ab2e17778680cb7a9751a8cce3bae178657df6580d68552b948e0d6');
 
         return $instance;
     }
@@ -1318,7 +1372,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_query_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf_orm_default_867f2de982b34cfd13fc8aaa19be1f45af32265a7104a32d2623d123b8f898da');
+        $instance->setNamespace('sf_orm_default_ee4e005e8ab2e17778680cb7a9751a8cce3bae178657df6580d68552b948e0d6');
 
         return $instance;
     }
@@ -1332,7 +1386,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_result_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf_orm_default_867f2de982b34cfd13fc8aaa19be1f45af32265a7104a32d2623d123b8f898da');
+        $instance->setNamespace('sf_orm_default_ee4e005e8ab2e17778680cb7a9751a8cce3bae178657df6580d68552b948e0d6');
 
         return $instance;
     }
@@ -1400,6 +1454,10 @@ class appDevDebugProjectContainer extends Container
             return ${($_ = isset($this->services['form.type.choice']) ? $this->services['form.type.choice'] : $this->getForm_Type_ChoiceService()) && false ?: '_'};
         }, 'Symfony\\Component\\Form\\Extension\\Core\\Type\\FormType' => function () {
             return ${($_ = isset($this->services['form.type.form']) ? $this->services['form.type.form'] : $this->getForm_Type_FormService()) && false ?: '_'};
+        }, 'Vich\\UploaderBundle\\Form\\Type\\VichFileType' => function () {
+            return ${($_ = isset($this->services['vich_uploader.form.type.file']) ? $this->services['vich_uploader.form.type.file'] : $this->get('vich_uploader.form.type.file')) && false ?: '_'};
+        }, 'Vich\\UploaderBundle\\Form\\Type\\VichImageType' => function () {
+            return ${($_ = isset($this->services['vich_uploader.form.type.image']) ? $this->services['vich_uploader.form.type.image'] : $this->get('vich_uploader.form.type.image')) && false ?: '_'};
         }, 'blackknight467\\StarRatingBundle\\Form\\RatingType' => function () {
             return ${($_ = isset($this->services['star_rating.type']) ? $this->services['star_rating.type'] : $this->get('star_rating.type')) && false ?: '_'};
         })), array('Symfony\\Component\\Form\\Extension\\Core\\Type\\FormType' => new RewindableGenerator(function () {
@@ -2223,6 +2281,80 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the public 'knp_paginator' shared service.
+     *
+     * @return \Knp\Component\Pager\Paginator
+     */
+    protected function getKnpPaginatorService($lazyLoad = true)
+    {
+        $this->services['knp_paginator'] = $instance = new \Knp\Component\Pager\Paginator(${($_ = isset($this->services['debug.event_dispatcher']) ? $this->services['debug.event_dispatcher'] : $this->get('debug.event_dispatcher')) && false ?: '_'});
+
+        $instance->setDefaultPaginatorOptions(array('pageParameterName' => 'page', 'sortFieldParameterName' => 'sort', 'sortDirectionParameterName' => 'direction', 'filterFieldParameterName' => 'filterField', 'filterValueParameterName' => 'filterValue', 'distinct' => true));
+
+        return $instance;
+    }
+
+    /**
+     * Gets the public 'knp_paginator.helper.processor' shared service.
+     *
+     * @return \Knp\Bundle\PaginatorBundle\Helper\Processor
+     */
+    protected function getKnpPaginator_Helper_ProcessorService()
+    {
+        return $this->services['knp_paginator.helper.processor'] = new \Knp\Bundle\PaginatorBundle\Helper\Processor(${($_ = isset($this->services['router']) ? $this->services['router'] : $this->get('router')) && false ?: '_'}, ${($_ = isset($this->services['translator']) ? $this->services['translator'] : $this->get('translator')) && false ?: '_'});
+    }
+
+    /**
+     * Gets the public 'knp_paginator.subscriber.filtration' shared service.
+     *
+     * @return \Knp\Component\Pager\Event\Subscriber\Filtration\FiltrationSubscriber
+     */
+    protected function getKnpPaginator_Subscriber_FiltrationService()
+    {
+        return $this->services['knp_paginator.subscriber.filtration'] = new \Knp\Component\Pager\Event\Subscriber\Filtration\FiltrationSubscriber();
+    }
+
+    /**
+     * Gets the public 'knp_paginator.subscriber.paginate' shared service.
+     *
+     * @return \Knp\Component\Pager\Event\Subscriber\Paginate\PaginationSubscriber
+     */
+    protected function getKnpPaginator_Subscriber_PaginateService()
+    {
+        return $this->services['knp_paginator.subscriber.paginate'] = new \Knp\Component\Pager\Event\Subscriber\Paginate\PaginationSubscriber();
+    }
+
+    /**
+     * Gets the public 'knp_paginator.subscriber.sliding_pagination' shared service.
+     *
+     * @return \Knp\Bundle\PaginatorBundle\Subscriber\SlidingPaginationSubscriber
+     */
+    protected function getKnpPaginator_Subscriber_SlidingPaginationService()
+    {
+        return $this->services['knp_paginator.subscriber.sliding_pagination'] = new \Knp\Bundle\PaginatorBundle\Subscriber\SlidingPaginationSubscriber(array('defaultPaginationTemplate' => '@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig', 'defaultSortableTemplate' => '@KnpPaginator/Pagination/sortable_link.html.twig', 'defaultFiltrationTemplate' => '@KnpPaginator/Pagination/filtration.html.twig', 'defaultPageRange' => 5));
+    }
+
+    /**
+     * Gets the public 'knp_paginator.subscriber.sortable' shared service.
+     *
+     * @return \Knp\Component\Pager\Event\Subscriber\Sortable\SortableSubscriber
+     */
+    protected function getKnpPaginator_Subscriber_SortableService()
+    {
+        return $this->services['knp_paginator.subscriber.sortable'] = new \Knp\Component\Pager\Event\Subscriber\Sortable\SortableSubscriber();
+    }
+
+    /**
+     * Gets the public 'knp_paginator.twig.extension.pagination' shared service.
+     *
+     * @return \Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension
+     */
+    protected function getKnpPaginator_Twig_Extension_PaginationService()
+    {
+        return $this->services['knp_paginator.twig.extension.pagination'] = new \Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension(${($_ = isset($this->services['knp_paginator.helper.processor']) ? $this->services['knp_paginator.helper.processor'] : $this->get('knp_paginator.helper.processor')) && false ?: '_'});
+    }
+
+    /**
      * Gets the public 'locale_listener' shared service.
      *
      * @return \Symfony\Component\HttpKernel\EventListener\LocaleListener
@@ -2729,7 +2861,7 @@ class appDevDebugProjectContainer extends Container
         $o = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($f, $m, array(), $a);
         $o->setOptions(array('login_path' => '/login', 'failure_path' => NULL, 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'));
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($l, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider(array()), 1 => ${($_ = isset($this->services['fos_user.user_provider.username']) ? $this->services['fos_user.user_provider.username'] : $this->getFosUser_UserProvider_UsernameService()) && false ?: '_'}), 'main', $a, $c, $d), 2 => $n, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $g, ${($_ = isset($this->services['security.authentication.session_strategy']) ? $this->services['security.authentication.session_strategy'] : $this->getSecurity_Authentication_SessionStrategyService()) && false ?: '_'}, $m, 'main', new \Symfony\Component\Security\Http\Authentication\CustomAuthenticationSuccessHandler(${($_ = isset($this->services['redirect.after.login']) ? $this->services['redirect.after.login'] : $this->get('redirect.after.login')) && false ?: '_'}, array('always_use_default_target_path' => false, 'default_target_path' => '/', 'login_path' => '/login', 'target_path_parameter' => '_target_path', 'use_referer' => false), 'main'), $o, array('check_path' => '/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, ${($_ = isset($this->services['security.csrf.token_manager']) ? $this->services['security.csrf.token_manager'] : $this->get('security.csrf.token_manager')) && false ?: '_'}), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5a948b63aa2dc6.07780122', $a, $g), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, ${($_ = isset($this->services['debug.security.access.decision_manager']) ? $this->services['debug.security.access.decision_manager'] : $this->getDebug_Security_Access_DecisionManagerService()) && false ?: '_'}, $l, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $d, $m, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $m, '/login', false), NULL, NULL, $a, false), new \Symfony\Bundle\SecurityBundle\Security\FirewallConfig('main', 'security.user_checker', 'security.request_matcher.a64d671f18e5575531d76c1d1154fdc4476cb8a79c02ed7a3469178c6d7b96b5ed4e60db', true, false, 'security.user.provider.concrete.in_memory', 'main', 'security.authentication.form_entry_point.main', NULL, NULL, array(0 => 'logout', 1 => 'form_login', 2 => 'anonymous')));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($l, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider(array()), 1 => ${($_ = isset($this->services['fos_user.user_provider.username']) ? $this->services['fos_user.user_provider.username'] : $this->getFosUser_UserProvider_UsernameService()) && false ?: '_'}), 'main', $a, $c, $d), 2 => $n, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $g, ${($_ = isset($this->services['security.authentication.session_strategy']) ? $this->services['security.authentication.session_strategy'] : $this->getSecurity_Authentication_SessionStrategyService()) && false ?: '_'}, $m, 'main', new \Symfony\Component\Security\Http\Authentication\CustomAuthenticationSuccessHandler(${($_ = isset($this->services['redirect.after.login']) ? $this->services['redirect.after.login'] : $this->get('redirect.after.login')) && false ?: '_'}, array('always_use_default_target_path' => false, 'default_target_path' => '/', 'login_path' => '/login', 'target_path_parameter' => '_target_path', 'use_referer' => false), 'main'), $o, array('check_path' => '/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, ${($_ = isset($this->services['security.csrf.token_manager']) ? $this->services['security.csrf.token_manager'] : $this->get('security.csrf.token_manager')) && false ?: '_'}), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5a968fc31a6ef3.77246805', $a, $g), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, ${($_ = isset($this->services['debug.security.access.decision_manager']) ? $this->services['debug.security.access.decision_manager'] : $this->getDebug_Security_Access_DecisionManagerService()) && false ?: '_'}, $l, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $d, $m, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $m, '/login', false), NULL, NULL, $a, false), new \Symfony\Bundle\SecurityBundle\Security\FirewallConfig('main', 'security.user_checker', 'security.request_matcher.a64d671f18e5575531d76c1d1154fdc4476cb8a79c02ed7a3469178c6d7b96b5ed4e60db', true, false, 'security.user.provider.concrete.in_memory', 'main', 'security.authentication.form_entry_point.main', NULL, NULL, array(0 => 'logout', 1 => 'form_login', 2 => 'anonymous')));
     }
 
     /**
@@ -3185,6 +3317,8 @@ class appDevDebugProjectContainer extends Container
         $instance->addExtension(new \Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension());
         $instance->addExtension(${($_ = isset($this->services['star_rating.twig']) ? $this->services['star_rating.twig'] : $this->get('star_rating.twig')) && false ?: '_'});
         $instance->addExtension(new \Mgilet\NotificationBundle\Twig\NotificationExtension(${($_ = isset($this->services['mgilet.notification']) ? $this->services['mgilet.notification'] : $this->get('mgilet.notification')) && false ?: '_'}, $e, $instance, $c));
+        $instance->addExtension(new \Vich\UploaderBundle\Twig\Extension\UploaderExtension(${($_ = isset($this->services['vich_uploader.templating.helper.uploader_helper']) ? $this->services['vich_uploader.templating.helper.uploader_helper'] : $this->get('vich_uploader.templating.helper.uploader_helper')) && false ?: '_'}));
+        $instance->addExtension(${($_ = isset($this->services['knp_paginator.twig.extension.pagination']) ? $this->services['knp_paginator.twig.extension.pagination'] : $this->get('knp_paginator.twig.extension.pagination')) && false ?: '_'});
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\DumpExtension(${($_ = isset($this->services['var_dumper.cloner']) ? $this->services['var_dumper.cloner'] : $this->get('var_dumper.cloner')) && false ?: '_'}, $f));
         $instance->addExtension(new \Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension($g));
         $instance->addGlobal('app', $h);
@@ -3256,6 +3390,8 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath(($this->targetDirs[3].'\\vendor\\friendsofsymfony\\user-bundle/Resources/views'), 'FOSUser');
         $instance->addPath(($this->targetDirs[3].'\\vendor\\blackknight467\\star-rating-bundle\\blackknight467\\StarRatingBundle/Resources/views'), 'StarRating');
         $instance->addPath(($this->targetDirs[3].'\\vendor\\mgilet\\notification-bundle/Resources/views'), 'MgiletNotification');
+        $instance->addPath(($this->targetDirs[3].'\\vendor\\vich\\uploader-bundle/Resources/views'), 'VichUploader');
+        $instance->addPath(($this->targetDirs[3].'\\vendor\\knplabs\\knp-paginator-bundle/Resources/views'), 'KnpPaginator');
         $instance->addPath(($this->targetDirs[3].'\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\DebugBundle/Resources/views'), 'Debug');
         $instance->addPath(($this->targetDirs[3].'\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views'), 'WebProfiler');
         $instance->addPath(($this->targetDirs[3].'\\app/Resources/views'));
@@ -3405,6 +3541,128 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the public 'vich_uploader.directory_namer_subdir' shared service.
+     *
+     * @return \Vich\UploaderBundle\Naming\SubdirDirectoryNamer
+     */
+    protected function getVichUploader_DirectoryNamerSubdirService()
+    {
+        return $this->services['vich_uploader.directory_namer_subdir'] = new \Vich\UploaderBundle\Naming\SubdirDirectoryNamer();
+    }
+
+    /**
+     * Gets the public 'vich_uploader.download_handler' shared service.
+     *
+     * @return \Vich\UploaderBundle\Handler\DownloadHandler
+     */
+    protected function getVichUploader_DownloadHandlerService()
+    {
+        return $this->services['vich_uploader.download_handler'] = new \Vich\UploaderBundle\Handler\DownloadHandler(${($_ = isset($this->services['vich_uploader.property_mapping_factory']) ? $this->services['vich_uploader.property_mapping_factory'] : $this->getVichUploader_PropertyMappingFactoryService()) && false ?: '_'}, ${($_ = isset($this->services['vich_uploader.storage']) ? $this->services['vich_uploader.storage'] : $this->get('vich_uploader.storage')) && false ?: '_'});
+    }
+
+    /**
+     * Gets the public 'vich_uploader.form.type.file' shared service.
+     *
+     * @return \Vich\UploaderBundle\Form\Type\VichFileType
+     */
+    protected function getVichUploader_Form_Type_FileService()
+    {
+        return $this->services['vich_uploader.form.type.file'] = new \Vich\UploaderBundle\Form\Type\VichFileType(${($_ = isset($this->services['vich_uploader.storage']) ? $this->services['vich_uploader.storage'] : $this->get('vich_uploader.storage')) && false ?: '_'}, ${($_ = isset($this->services['vich_uploader.upload_handler']) ? $this->services['vich_uploader.upload_handler'] : $this->get('vich_uploader.upload_handler')) && false ?: '_'}, ${($_ = isset($this->services['translator']) ? $this->services['translator'] : $this->get('translator')) && false ?: '_'});
+    }
+
+    /**
+     * Gets the public 'vich_uploader.form.type.image' shared service.
+     *
+     * @return \Vich\UploaderBundle\Form\Type\VichImageType
+     */
+    protected function getVichUploader_Form_Type_ImageService()
+    {
+        return $this->services['vich_uploader.form.type.image'] = new \Vich\UploaderBundle\Form\Type\VichImageType(${($_ = isset($this->services['vich_uploader.storage']) ? $this->services['vich_uploader.storage'] : $this->get('vich_uploader.storage')) && false ?: '_'}, ${($_ = isset($this->services['vich_uploader.upload_handler']) ? $this->services['vich_uploader.upload_handler'] : $this->get('vich_uploader.upload_handler')) && false ?: '_'}, ${($_ = isset($this->services['translator']) ? $this->services['translator'] : $this->get('translator')) && false ?: '_'});
+    }
+
+    /**
+     * Gets the public 'vich_uploader.namer_hash' shared service.
+     *
+     * @return \Vich\UploaderBundle\Naming\HashNamer
+     */
+    protected function getVichUploader_NamerHashService()
+    {
+        return $this->services['vich_uploader.namer_hash'] = new \Vich\UploaderBundle\Naming\HashNamer();
+    }
+
+    /**
+     * Gets the public 'vich_uploader.namer_origname' shared service.
+     *
+     * @return \Vich\UploaderBundle\Naming\OrignameNamer
+     */
+    protected function getVichUploader_NamerOrignameService()
+    {
+        return $this->services['vich_uploader.namer_origname'] = new \Vich\UploaderBundle\Naming\OrignameNamer();
+    }
+
+    /**
+     * Gets the public 'vich_uploader.namer_property' shared service.
+     *
+     * @return \Vich\UploaderBundle\Naming\PropertyNamer
+     */
+    protected function getVichUploader_NamerPropertyService()
+    {
+        return $this->services['vich_uploader.namer_property'] = new \Vich\UploaderBundle\Naming\PropertyNamer();
+    }
+
+    /**
+     * Gets the public 'vich_uploader.namer_uniqid' shared service.
+     *
+     * @return \Vich\UploaderBundle\Naming\UniqidNamer
+     */
+    protected function getVichUploader_NamerUniqidService()
+    {
+        return $this->services['vich_uploader.namer_uniqid'] = new \Vich\UploaderBundle\Naming\UniqidNamer();
+    }
+
+    /**
+     * Gets the public 'vich_uploader.namer_uniqid.devis' shared service.
+     *
+     * @return \Vich\UploaderBundle\Naming\UniqidNamer
+     */
+    protected function getVichUploader_NamerUniqid_DevisService()
+    {
+        return $this->services['vich_uploader.namer_uniqid.devis'] = new \Vich\UploaderBundle\Naming\UniqidNamer();
+    }
+
+    /**
+     * Gets the public 'vich_uploader.storage' shared service.
+     *
+     * @return \Vich\UploaderBundle\Storage\FileSystemStorage
+     */
+    protected function getVichUploader_StorageService()
+    {
+        return $this->services['vich_uploader.storage'] = new \Vich\UploaderBundle\Storage\FileSystemStorage(${($_ = isset($this->services['vich_uploader.property_mapping_factory']) ? $this->services['vich_uploader.property_mapping_factory'] : $this->getVichUploader_PropertyMappingFactoryService()) && false ?: '_'});
+    }
+
+    /**
+     * Gets the public 'vich_uploader.templating.helper.uploader_helper' shared service.
+     *
+     * @return \Vich\UploaderBundle\Templating\Helper\UploaderHelper
+     */
+    protected function getVichUploader_Templating_Helper_UploaderHelperService()
+    {
+        return $this->services['vich_uploader.templating.helper.uploader_helper'] = new \Vich\UploaderBundle\Templating\Helper\UploaderHelper(${($_ = isset($this->services['vich_uploader.storage']) ? $this->services['vich_uploader.storage'] : $this->get('vich_uploader.storage')) && false ?: '_'});
+    }
+
+    /**
+     * Gets the public 'vich_uploader.upload_handler' shared service.
+     *
+     * @return \Vich\UploaderBundle\Handler\UploadHandler
+     */
+    protected function getVichUploader_UploadHandlerService()
+    {
+        $a = ${($_ = isset($this->services['vich_uploader.storage']) ? $this->services['vich_uploader.storage'] : $this->get('vich_uploader.storage')) && false ?: '_'};
+
+        return $this->services['vich_uploader.upload_handler'] = new \Vich\UploaderBundle\Handler\UploadHandler(${($_ = isset($this->services['vich_uploader.property_mapping_factory']) ? $this->services['vich_uploader.property_mapping_factory'] : $this->getVichUploader_PropertyMappingFactoryService()) && false ?: '_'}, $a, new \Vich\UploaderBundle\Injector\FileInjector($a), ${($_ = isset($this->services['debug.event_dispatcher']) ? $this->services['debug.event_dispatcher'] : $this->get('debug.event_dispatcher')) && false ?: '_'});
+    }
+
+    /**
      * Gets the public 'web_profiler.controller.exception' shared service.
      *
      * @return \Symfony\Bundle\WebProfilerBundle\Controller\ExceptionController
@@ -3445,23 +3703,23 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
-     * Gets the private '1_eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfe' shared service.
+     * Gets the private '1_0f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7' shared service.
      *
      * @return \Symfony\Component\DependencyInjection\Config\ContainerParametersResourceChecker
      */
-    protected function get1Eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfeService()
+    protected function get10f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7Service()
     {
-        return $this->services['1_eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfe'] = new \Symfony\Component\DependencyInjection\Config\ContainerParametersResourceChecker($this);
+        return $this->services['1_0f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7'] = new \Symfony\Component\DependencyInjection\Config\ContainerParametersResourceChecker($this);
     }
 
     /**
-     * Gets the private '2_eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfe' shared service.
+     * Gets the private '2_0f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7' shared service.
      *
      * @return \Symfony\Component\Config\Resource\SelfCheckingResourceChecker
      */
-    protected function get2Eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfeService()
+    protected function get20f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7Service()
     {
-        return $this->services['2_eebbd658cae1dc5cee80f1e00ab13a380f3f6d43bed05596cd3d4b53788a8dfe'] = new \Symfony\Component\Config\Resource\SelfCheckingResourceChecker();
+        return $this->services['2_0f5e39d2937b43af031f16e2d8059720547e54b9ad1bd2e594abad62842f17c7'] = new \Symfony\Component\Config\Resource\SelfCheckingResourceChecker();
     }
 
     /**
@@ -3568,7 +3826,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getCache_Annotations_RecorderInnerService($lazyLoad = true)
     {
-        return $this->services['cache.annotations.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('PD9zSbmgoR', 0, 'rI-gNl-LxSHtKD4hAxFLU8', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+        return $this->services['cache.annotations.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('lYwuIm2eIM', 0, 'Uc7VWtQ2PipXIF20ezeOPD', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
     }
 
     /**
@@ -3578,7 +3836,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getCache_App_RecorderInnerService($lazyLoad = true)
     {
-        $this->services['cache.app.recorder_inner'] = $instance = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('Wyzen7YP52', 0, (__DIR__.'/pools'));
+        $this->services['cache.app.recorder_inner'] = $instance = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('R-nTyOAHYg', 0, (__DIR__.'/pools'));
 
         if ($this->has('monolog.logger.cache')) {
             $instance->setLogger(${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
@@ -3594,7 +3852,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getCache_Serializer_RecorderInnerService($lazyLoad = true)
     {
-        return $this->services['cache.serializer.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('oh0SMG46Uq', 0, 'rI-gNl-LxSHtKD4hAxFLU8', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+        return $this->services['cache.serializer.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('E35I0NCszj', 0, 'Uc7VWtQ2PipXIF20ezeOPD', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
     }
 
     /**
@@ -3604,7 +3862,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getCache_System_RecorderInnerService($lazyLoad = true)
     {
-        return $this->services['cache.system.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('5+21B9mJDe', 0, 'rI-gNl-LxSHtKD4hAxFLU8', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+        return $this->services['cache.system.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('II+kFOMykM', 0, 'Uc7VWtQ2PipXIF20ezeOPD', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
     }
 
     /**
@@ -3624,7 +3882,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getCache_Validator_RecorderInnerService($lazyLoad = true)
     {
-        return $this->services['cache.validator.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('L8ZfpACaAu', 0, 'rI-gNl-LxSHtKD4hAxFLU8', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+        return $this->services['cache.validator.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('IGdkLhEPc1', 0, 'Uc7VWtQ2PipXIF20ezeOPD', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
     }
 
     /**
@@ -3907,7 +4165,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Authentication_Provider_Anonymous_MainService()
     {
-        return $this->services['security.authentication.provider.anonymous.main'] = new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5a948b63aa2dc6.07780122');
+        return $this->services['security.authentication.provider.anonymous.main'] = new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5a968fc31a6ef3.77246805');
     }
 
     /**
@@ -4066,6 +4324,31 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the private 'vich_uploader.metadata_reader' shared service.
+     *
+     * @return \Vich\UploaderBundle\Metadata\MetadataReader
+     */
+    protected function getVichUploader_MetadataReaderService()
+    {
+        $a = new \Vich\UploaderBundle\Metadata\Driver\FileLocator(array());
+
+        $b = new \Metadata\MetadataFactory(new \Vich\UploaderBundle\Metadata\Driver\ChainDriver(array(0 => new \Vich\UploaderBundle\Metadata\Driver\AnnotationDriver(${($_ = isset($this->services['annotation_reader']) ? $this->services['annotation_reader'] : $this->get('annotation_reader')) && false ?: '_'}), 1 => new \Vich\UploaderBundle\Metadata\Driver\YamlDriver($a), 2 => new \Vich\UploaderBundle\Metadata\Driver\XmlDriver($a))), 'Metadata\\ClassHierarchyMetadata', true);
+        $b->setCache(new \Metadata\Cache\FileCache((__DIR__.'/vich_uploader')));
+
+        return $this->services['vich_uploader.metadata_reader'] = new \Vich\UploaderBundle\Metadata\MetadataReader($b);
+    }
+
+    /**
+     * Gets the private 'vich_uploader.property_mapping_factory' shared service.
+     *
+     * @return \Vich\UploaderBundle\Mapping\PropertyMappingFactory
+     */
+    protected function getVichUploader_PropertyMappingFactoryService()
+    {
+        return $this->services['vich_uploader.property_mapping_factory'] = new \Vich\UploaderBundle\Mapping\PropertyMappingFactory($this, ${($_ = isset($this->services['vich_uploader.metadata_reader']) ? $this->services['vich_uploader.metadata_reader'] : $this->getVichUploader_MetadataReaderService()) && false ?: '_'}, array('devis' => array('uri_prefix' => '/devis/', 'upload_destination' => ($this->targetDirs[3].'\\app/../web/devis/'), 'namer' => array('service' => 'vich_uploader.namer_uniqid.devis', 'options' => array()), 'directory_namer' => array('service' => NULL, 'options' => NULL), 'delete_on_remove' => true, 'delete_on_update' => true, 'inject_on_load' => false, 'db_driver' => 'orm')), '_name');
+    }
+
+    /**
      * Gets the private 'web_profiler.csp.handler' shared service.
      *
      * @return \Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler
@@ -4133,6 +4416,7 @@ class appDevDebugProjectContainer extends Container
         'kernel.bundles_metadata' => false,
         'session.save_path' => false,
         'router.resource' => false,
+        'vich_uploader.mappings' => false,
     );
     private $dynamicParameters = array();
 
@@ -4212,6 +4496,16 @@ class appDevDebugProjectContainer extends Container
                     'path' => ($this->targetDirs[3].'\\vendor\\mgilet\\notification-bundle'),
                     'namespace' => 'Mgilet\\NotificationBundle',
                 ),
+                'VichUploaderBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'\\vendor\\vich\\uploader-bundle'),
+                    'namespace' => 'Vich\\UploaderBundle',
+                ),
+                'KnpPaginatorBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'\\vendor\\knplabs\\knp-paginator-bundle'),
+                    'namespace' => 'Knp\\Bundle\\PaginatorBundle',
+                ),
                 'DebugBundle' => array(
                     'parent' => NULL,
                     'path' => ($this->targetDirs[3].'\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\DebugBundle'),
@@ -4240,6 +4534,26 @@ class appDevDebugProjectContainer extends Container
             ); break;
             case 'session.save_path': $value = ($this->targetDirs[3].'/var/sessions/dev'); break;
             case 'router.resource': $value = ($this->targetDirs[3].'/app/config/routing_dev.yml'); break;
+            case 'vich_uploader.mappings': $value = array(
+                'devis' => array(
+                    'uri_prefix' => '/devis/',
+                    'upload_destination' => ($this->targetDirs[3].'\\app/../web/devis/'),
+                    'namer' => array(
+                        'service' => 'vich_uploader.namer_uniqid.devis',
+                        'options' => array(
+
+                        ),
+                    ),
+                    'directory_namer' => array(
+                        'service' => NULL,
+                        'options' => NULL,
+                    ),
+                    'delete_on_remove' => true,
+                    'delete_on_update' => true,
+                    'inject_on_load' => false,
+                    'db_driver' => 'orm',
+                ),
+            ); break;
             default: throw new InvalidArgumentException(sprintf('The dynamic parameter "%s" must be defined.', $name));
         }
         $this->loadedDynamicParameters[$name] = true;
@@ -4272,6 +4586,8 @@ class appDevDebugProjectContainer extends Container
                 'FOSUserBundle' => 'FOS\\UserBundle\\FOSUserBundle',
                 'StarRatingBundle' => 'blackknight467\\StarRatingBundle\\StarRatingBundle',
                 'MgiletNotificationBundle' => 'Mgilet\\NotificationBundle\\MgiletNotificationBundle',
+                'VichUploaderBundle' => 'Vich\\UploaderBundle\\VichUploaderBundle',
+                'KnpPaginatorBundle' => 'Knp\\Bundle\\PaginatorBundle\\KnpPaginatorBundle',
                 'DebugBundle' => 'Symfony\\Bundle\\DebugBundle\\DebugBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
@@ -4584,6 +4900,14 @@ class appDevDebugProjectContainer extends Container
             'star_rating.config' => array(
 
             ),
+            'vich_uploader.default_filename_attribute_suffix' => '_name',
+            'vich_uploader.file_injector.class' => 'Vich\\UploaderBundle\\Injector\\FileInjector',
+            'knp_paginator.class' => 'Knp\\Component\\Pager\\Paginator',
+            'knp_paginator.helper.processor.class' => 'Knp\\Bundle\\PaginatorBundle\\Helper\\Processor',
+            'knp_paginator.template.pagination' => '@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig',
+            'knp_paginator.template.filtration' => '@KnpPaginator/Pagination/filtration.html.twig',
+            'knp_paginator.template.sortable' => '@KnpPaginator/Pagination/sortable_link.html.twig',
+            'knp_paginator.page_range' => 5,
             'web_profiler.debug_toolbar.position' => 'bottom',
             'web_profiler.debug_toolbar.intercept_redirects' => false,
             'web_profiler.debug_toolbar.mode' => 2,

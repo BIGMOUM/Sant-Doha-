@@ -1,0 +1,104 @@
+{% extends "::base.html.twig" %}
+{% block head %}
+{% endblock %}
+{% block body %}
+    <!-- Content Start -->
+    <section class="content inner-pg blog-pg clearfix">
+        <!-- Breadcrumb Start -->
+        <div class="breadcrumb-title clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                        <div class="breadcrumb-left">
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="{{ path('sante_home') }}">HOME</a>
+                                </li>
+                                <li class="active">ARTICLES & EVENTS</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                        <div class="breadcrumb-right">
+                            <h5>Articles & Events</h5>
+                        </div>
+                    </div><!--/.col-sm-6 col-md-6-->
+                </div><!--/.row-->
+            </div><!--/.container-->
+        </div><!-- Breadcrumb End -->
+
+
+        <li>
+            <form method="post">
+                <label>rechercher</label>
+                <input name="titre" type="text" >
+                <input name="btn" type="submit">
+            </form>
+
+
+
+        </li>
+
+
+        {% for article in modeles %}
+
+
+            <div class="inner-content clearfix">
+                <div class="row">
+                    <div class="col-sm-12 col-md-8 col-lg-9">
+                        <!-- Content Description Start -->
+                        <div class="content-desc clearfix">
+                            <!-- Blog Lists Start -->
+                            <div class="blog-lists clearfix">
+                                <!-- Blog Post Start -->
+                                <div class="blog-post clearfix">
+                                    <!-- Blog Image Start -->
+                                    <div class="blog-image clearfix">
+                                        <a class="image clearfix" href="#"><img src="{{ asset('devis/' ~ article.devisName) }}" width="850" height="200">
+                                            <div class="overlay"></div></a> <!-- Employee Detail Start -->
+                                        <div class="emp-detail clearfix">
+                                            <div class="row">
+                                                <div class="emp-left emp-block">
+                                                    <div class="emp-left emp-block">
+
+                                                        <ul>
+                                                            <li>{{ article.dateCreation|date('d/M/Y') }}</li>
+                                                            <li>publie par  <a href="#">{{ article.acteur }}</a>
+
+
+                                                        </ul>
+                                                    </div><!--/.emp-left emp-block-->
+                                                </div><!--/.emp-left emp-block-->
+                                                <div class="col-sm-2 col-md-2">
+                                                    <div class="emp-right emp-block">
+                                                        <ul>
+
+                                                        </ul>
+                                                    </div><!--/.emp-right emp-block-->
+                                                </div><!--/.col-sm-2 col-md-2-->
+                                            </div><!--/.row-->
+                                        </div><!-- Employee Detail End -->
+                                    </div><!-- Blog Image End -->
+                                    <!-- Blog Detail Start -->
+                                    <div class="blog-detail clearfix">
+                                        <a href="#">{{ article.titre }}</a>
+                                        <p>{{ article.contenu }}</p><!-- Read More SVG Start -->
+                                        <a class="read-more" href="#" title="Read more"><svg height="57px" version="1.1" viewbox="0 0 59 57" width="59px" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M23,35 C23.5522847,35 24,35.4477153 24,36 C24,36.5522847 23.5522847,37 23,37 C22.4477153,37 22,36.5522847 22,36 C22,35.4477153 22.4477153,35 23,35 L23,35 Z M28,36 C28,36.5522847 27.5522847,37 27,37 C26.4477153,37 26,36.5522847 26,36 C26,35.4477153 26.4477153,35 27,35 C27.5522847,35 28,35.4477153 28,36 L28,36 Z M31,35 C31.5522847,35 32,35.4477153 32,36 C32,36.5522847 31.5522847,37 31,37 C30.4477153,37 30,36.5522847 30,36 C30,35.4477153 30.4477153,35 31,35 L31,35 Z" fill="#333333"></path>
+                                                <rect class="svg-more-l1" fill="#333333" height="2" width="16" x="22" y="21"></rect>
+                                                <rect class="svg-more-l2" fill="#333333" height="2" width="10" x="22" y="25"></rect>
+                                                <rect class="svg-more-l3" fill="#333333" height="2" width="16" x="22" y="29"></rect>
+                                                <rect class="svg-more-bg" fill="none" height="49" rx="5" stroke="#333333" stroke-width="2" width="51" x="4" y="4"></rect></svg></a> <!-- Read More SVG End -->
+                                    </div><!-- Blog Detail End -->
+                                </div><!-- Blog Post End -->
+                                <!-- Blog Post Start -->
+                            </div>
+                        </div></div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </section>
+
+
+{% endblock %}

@@ -19,6 +19,10 @@ class ComposerStaticInite21ccfc423c28a0b674eb436b1750b1b
     );
 
     public static $prefixLengthsPsr4 = array (
+        'V' => 
+        array (
+            'Vich\\UploaderBundle\\' => 20,
+        ),
         'T' => 
         array (
             'Twig\\' => 5,
@@ -57,6 +61,10 @@ class ComposerStaticInite21ccfc423c28a0b674eb436b1750b1b
             'Monolog\\' => 8,
             'Mgilet\\NotificationBundle\\' => 26,
         ),
+        'K' => 
+        array (
+            'Knp\\Bundle\\PaginatorBundle\\' => 27,
+        ),
         'I' => 
         array (
             'Incenteev\\ParameterHandler\\' => 27,
@@ -81,6 +89,10 @@ class ComposerStaticInite21ccfc423c28a0b674eb436b1750b1b
     );
 
     public static $prefixDirsPsr4 = array (
+        'Vich\\UploaderBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vich/uploader-bundle',
+        ),
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
@@ -185,6 +197,10 @@ class ComposerStaticInite21ccfc423c28a0b674eb436b1750b1b
         array (
             0 => __DIR__ . '/..' . '/mgilet/notification-bundle',
         ),
+        'Knp\\Bundle\\PaginatorBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle',
+        ),
         'Incenteev\\ParameterHandler\\' => 
         array (
             0 => __DIR__ . '/..' . '/incenteev/composer-parameter-handler',
@@ -247,6 +263,20 @@ class ComposerStaticInite21ccfc423c28a0b674eb436b1750b1b
             'SensioLabs\\Security' => 
             array (
                 0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
+            ),
+        ),
+        'M' => 
+        array (
+            'Metadata\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/jms/metadata/src',
+            ),
+        ),
+        'K' => 
+        array (
+            'Knp\\Component' => 
+            array (
+                0 => __DIR__ . '/..' . '/knplabs/knp-components/src',
             ),
         ),
         'D' => 

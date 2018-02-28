@@ -20,6 +20,8 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new blackknight467\StarRatingBundle\StarRatingBundle(),
             new Mgilet\NotificationBundle\MgiletNotificationBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

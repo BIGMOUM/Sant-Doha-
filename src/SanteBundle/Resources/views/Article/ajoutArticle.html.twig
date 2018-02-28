@@ -1,0 +1,116 @@
+{% block head %}
+
+    <style type="text/css">
+
+        #tablo{
+            margin-left:auto;
+            margin-right:auto;
+            border-collapse:collapse;
+
+            width:95%;
+        }
+        #tablo td{
+            border:1px solid #000000;
+        }
+        #tablo th{
+            border:1px solid #000000;
+            background-color:#dddddd;
+            color:#000000;
+            text-align:center;
+        }
+        -->
+
+    </style>
+{% endblock %}
+{% extends "adminlayout.html.twig" %}
+{% block body %}
+<div class="right_col" role="main">
+
+
+
+
+
+    <center>
+        <br><br><br><br>
+        <div class="container">
+            <legend align="center">Ajouter Un Article</legend>
+            {{ form_start(form) }}
+            <table id="tablo" >
+
+            <tr>
+                <th>
+                    Nom_Article
+                </th>
+                <td>
+                    {{ form_widget(form.titre) }}
+                    </br>
+                </td>
+
+            </tr>
+
+            <tr>
+                <th>
+                    Acteur:
+                </th>
+                <td>
+                    {{ form_widget(form.acteur) }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Contenu:
+                </th>
+                <td>
+                    {{ form_widget(form.contenu) }}
+                </td>
+            </tr>
+            <tr>
+
+
+            <tr>
+                <th>
+                    Date_Creation:
+                </th>
+                <td>
+                    {{ form_widget(form.dateCreation) }}
+                </td>
+            </tr>
+                <tr>
+            <th>
+                File:
+            </th>
+            <th>
+                {{ form_widget(form.devisFile) }}
+            </th>
+            </tr>
+                <tr>
+                    <th>
+                        Id_Video:
+                    </th>
+                    <td>
+                        {{ form_widget(form.id_video) }}
+                    </td>
+                </tr>
+
+            </table>
+                    {{ form_widget(form.valide)  }}
+
+
+
+
+
+
+
+        {{ form_end(form) }}
+        </div>
+
+
+    <fieldset id="Formulaire" class="center">
+</fieldset>
+
+</center>
+
+
+</div>
+
+{% endblock %}

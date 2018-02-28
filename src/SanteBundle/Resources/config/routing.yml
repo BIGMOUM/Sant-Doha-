@@ -83,3 +83,31 @@ sante_Filter:
     path:     /FilterAdmin
     defaults: { _controller: SanteBundle:Forum:Filter }
 
+sante_article:
+    path:     /ajout
+    defaults: { _controller: SanteBundle:Articles:ajout }
+sante_evenement:
+    path:     /ajout1
+    defaults: { _controller: SanteBundle:Evenement:ajoutE }
+sante_article_update:
+    path:     /update{id}
+    defaults: { _controller: SanteBundle:Articles:update }
+sante_article_delete:
+    path:     /delete{id}
+    defaults: { _controller: SanteBundle:Articles:delete }
+update:
+    path:     /update1/{id}
+    defaults: { _controller: SanteBundle:Evenement:updateE }
+delete:
+    path:     /delete1/{id}
+    defaults: { _controller: SanteBundle:Evenement:deleteE }
+Recherche_DQL_serie_ajax_parameter:
+    path:     /Articles/
+    defaults: { _controller: SanteBundle:Articles:Searchajax}
+sante_evenemts:
+    path:     /Evenements
+    defaults: { _controller: SanteBundle:Evenement:afficheE }
+rechercherC:
+    path:     /rechercherP
+    defaults: { _controller: SanteBundle:Articles:rechercheP}
+

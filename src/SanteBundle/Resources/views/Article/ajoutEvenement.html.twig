@@ -1,0 +1,100 @@
+{% block head %}
+
+    <style type="text/css">
+
+    #tablo{
+        margin-left:auto;
+        margin-right:auto;
+        border-collapse:collapse;
+
+        width:95%;
+    }
+    #tablo td{
+        border:1px solid #000000;
+    }
+    #tablo th{
+        border:1px solid #000000;
+        background-color:#dddddd;
+        color:#000000;
+        text-align:center;
+    }
+    -->
+
+</style>
+{% endblock %}
+{% extends "adminlayout.html.twig" %}
+{% block body %}
+<div class="right_col" role="main">
+
+
+
+
+
+<center>
+    <br><br><br><br>
+    <div class="container">
+    <legend align="center">Ajouter Un Evenement</legend>
+    {{ form_start(form) }}
+        <table id="tablo" >
+
+            <tr>
+                <th>
+                    Nom_Evenement
+                </th>
+                <td>
+                    {{ form_widget(form.titre) }}
+
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Description:
+                </th>
+                <td>
+                    {{ form_widget(form.description ) }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Date_debut
+                </th>
+                <td>
+                    {{ form_widget(form.dateDebut) }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Date_fin:
+                </th>
+                <td>
+                    {{ form_widget(form.dateFin) }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   File
+
+                </th>
+                <td>
+                    {{ form_widget(form.devisFile) }}
+
+                </td>
+
+            </tr>
+        </table>
+
+
+                <p>  {{ form_widget(form.valide) }}</p>
+
+
+
+
+        {{ form_end(form) }}
+
+
+</div>
+</fieldset>
+</center>
+
+</div>
+{% endblock %}
