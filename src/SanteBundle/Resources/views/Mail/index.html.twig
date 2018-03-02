@@ -1,0 +1,21 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}MailBundle:Mail:index{% endblock %}
+
+{% block body %}
+
+    <h2> <strong> Envoyer un mail a un médcin ?</strong> </h2>
+    <div class="col-xs-1 center-block">
+
+
+    {{ form_start (form) }}
+        <table>
+            <tr> <td> Nom </td> <td> {{ form_widget (form.nom) }} </td> </tr>
+            <tr> <td> Prenom </td> <td> {{ form_widget (form.prenom) }} </td> </tr>
+            <tr> <td> Téléphone </td> <td> {{ form_widget (form.tel) }} </td> </tr>
+            <tr> <td> Email </td> <td> {{ form_widget (form.email) }} </td> </tr>
+            <tr> <td> Text </td> <td> {{ form_widget (form.text) }} </td> </tr>
+        </table>
+    {{ form_end (form) }}
+    </div>
+{% endblock %}

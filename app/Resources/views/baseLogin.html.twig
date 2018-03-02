@@ -1,0 +1,807 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from demos.hogash.com/medlife-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jan 2018 23:05:08 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Hospital</title><!-- Favicon -->
+    <link href="{{ asset('images/favicon.ico') }}" rel="icon" type="image/x-icon"><!-- Font Awesome -->
+    <link href="{{ asset('fonts/font-awesome.min.css') }}" rel="stylesheet"><!-- Bootstrap -->
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet"><!--=== Add By Designer ===-->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('fonts/fonts.css') }}" rel="stylesheet"><!-- Yamm Megamenu -->
+    <link href="{{ asset('css/yamm.css') }}" rel="stylesheet"><!-- Animation -->
+    <link href="{{ asset('css/animate.css') }}" rel="stylesheet"><!-- Animation -->
+    <!-- Flat Icon -->
+    <link href="{{ asset('fonts/flaticon.css') }}" rel="stylesheet"><!-- Flat Icon -->
+    <!-- Multi Level Push Menu -->
+    <link href="{{ asset('css/normalize.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/component.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/modernizr.custom.js') }}">
+    </script><!-- Multi Level Push Menu -->
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link href="{{ asset('js/revslider/settings.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('js/revslider/layers.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('js/revslider/navigation.css') }}" rel="stylesheet" type="text/css">
+    <!-- REVOLUTION LAYERS STYLES -->
+
+    {% block styles %}
+    {% endblock %}
+
+
+
+</head>
+<body>
+
+<!-- Header Start -->
+
+
+<header class="header clearfix">
+    <!-- Header Top Start -->
+    <div class="h-top clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+
+                </div>
+                <div class="col-sm-8 col-md-8">
+                    <div class="h-right">
+                        <!-- History Policy Start -->
+                        <div class="h-history-policy clearfix">
+                            <div class="burger hidden-lg">
+                                <a href="#"><span></span> <span></span> <span></span></a>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">History</a>
+                                </li>
+                                <li>
+                                    <a href="#">Careers</a>
+                                </li>
+                                <li>
+                                    <a href="#">News</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div><!-- History Policy End -->
+                        <!-- Login-Register Start -->
+
+                        <div class="h-login-register clearfix">
+
+                            <a   href="{{ path('fos_user_registration_register') }}">Sign up&nbsp;&nbsp;</a>
+
+                            <a   href="{{ path('fos_user_security_login') }}">Login</a>
+
+                        </div><!-- Login-Register End -->
+                    </div><!--/.h-right-->
+                </div><!--/.col-sm-8 col-md-8"-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!-- Header Top End -->
+    <!-- Header Bottom Start -->
+    <div class="h-bottom clearfix">
+        <div class="container">
+            <div class="navigation-menu">
+                <div class="navbar yamm navbar-default">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="{{ path('sante_home') }}"><img alt="" class="hidden-xs hidden-sm"
+                                                                                     src="{{ asset('images/logo.png') }}">
+                            <img alt="" class="visible-xs visible-sm" src="{{ asset('images/mobile-logo.png') }}"></a>
+                    </div><!-- Desktop Navigation List Start -->
+                    <div class="navbar-collapse collapse hidden-xs" id="navbar-collapse-1">
+                        <div class="background"></div>
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a class="dropdown-toggle" href="{{ path('sante_home') }}">HOME</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">MedLife – Annapolis</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">MedLife – Germantown</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">MedLife – Columbia</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">MedLife – Olney</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">MedLife – Pasadena</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">MedLife – Pikesville</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">MedLife – Waldorf</a>
+                                    </li>
+                                </ul><!--/.dropdown-menu-->
+                            </li><!--/.dropdown-->
+                            <li class="dropdown yamm-fw">
+                                <a class="dropdown-toggle" href="{{ path('sante_services') }}">SERVICES</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <!-- Content container to add padding -->
+                                        <div class="yamm-content">
+                                            <div class="row">
+                                                <ul class="col-md-3 list-unstyled">
+                                                    <li>
+                                                        <a class="mega-menu-title" href="#">CATEGORY 1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">General & Preventive Care</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Cosmetic Solutions</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Restorative Solutions</a>
+                                                    </li>
+                                                </ul><!--/.col-md-3-->
+                                                <ul class="col-md-3 list-unstyled">
+                                                    <li>
+                                                        <a class="mega-menu-title" href="#">CATEGORY 2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Additional Treatments</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Orthodontics</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Dentures & Denture Repair</a>
+                                                    </li>
+                                                </ul><!--/.col-md-3-->
+                                                <ul class="col-md-3 list-unstyled">
+                                                    <li>
+                                                        <a class="mega-menu-title" href="#">CATEGORY 3</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Diagnostic & Preventive</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Pediatric Dentistry</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Phisiotheraphy</a>
+                                                    </li>
+                                                </ul><!--/.col-md-3-->
+                                                <ul class="col-md-3 list-unstyled">
+                                                    <li>
+                                                        <a class="mega-menu-title" href="#">CATEGORY 4</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Minor surgery</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Allergy / Immunology</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Flu vaccination</a>
+                                                    </li>
+                                                </ul><!--/.col-md-3-->
+                                            </div><!--/.row-->
+                                        </div><!--/.yamm-content-->
+                                    </li>
+                                </ul><!--/.dropdown-menu-->
+                            </li><!--/.dropdown yamm-fw active-->
+                            <li>
+                                <a href="{{ path('sante_doctors') }}">DOCTORS</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('sante_timetable') }}">TIMETABLE</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a class="dropdown-toggle" href="{{ path('sante_forum') }}">FORUM</a>
+                                <ul class="dropdown-menu">
+                                    <li class="active">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Appointment</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blog</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" href="{{ path('sante_shop') }}">SHOP</a>
+                                        <ul class="dropdown-menu sub-menu">
+                                            <li>
+                                                <a href="#">Products Page</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Product Details Page</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Cart Page</a>
+                                            </li>
+                                        </ul><!--/.dropdown-menu-->
+                                    </li><!--/.dropdown-->
+                                    <li>
+                                        <a href="{{ path('sante_locate') }}">Locate</a>
+                                    </li>
+                                </ul><!--/.dropdown-menu-->
+                            </li><!--/.dropdown active-->
+                            <li>
+                                <a href="{{ path('sante_articles') }}">ARTICLES</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('sante_shop') }}">SHOP</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('sante_locate') }}">LOCATE</a>
+                            </li>
+                        </ul><!--/.nav navbar-nav-->
+                    </div><!-- Desktop Navigation List End -->
+                    <!-- Mobile Navigation List Start -->
+                    <div class="dl-menuwrapper visible-xs" id="dl-menu">
+                        <button class="dl-trigger">Open Menu</button>
+                        <div class="background"></div>
+                        <ul class="dl-menu">
+                            <li class="active">
+                                <a href="{{ path('sante_home') }}">HOME</a>
+                                <!--/.dl-submenu-->
+                            </li>
+                            <li class="active">
+                                <a href="{{ path('sante_services') }}">SERVICES</a>
+                                <ul class="dl-submenu">
+                                    <li>
+                                        <a href="#">Category 1</a>
+                                        <ul class="dl-submenu">
+                                            <li>
+                                                <a href="#">General & Preventive Care</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Cosmetic Solutions</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Restorative Solutions</a>
+                                            </li>
+                                        </ul><!--/.dl-submenu-->
+                                    </li>
+                                    <li>
+                                        <a href="#">Category 2</a>
+                                        <ul class="dl-submenu">
+                                            <li>
+                                                <a href="#">Additional Treatments</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Orthodontics</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Dentures & Denture Repair</a>
+                                            </li>
+                                        </ul><!--/.dl-submenu-->
+                                    </li>
+                                    <li>
+                                        <a href="#">Category 3</a>
+                                        <ul class="dl-submenu">
+                                            <li class="active">
+                                                <a href="#">Diagnostic & Preventive</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Pediatric Dentistry</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Phisiotheraphy</a>
+                                            </li>
+                                        </ul><!--/.dl-submenu-->
+                                    </li>
+                                    <li>
+                                        <a href="#">Category 4</a>
+                                        <ul class="dl-submenu">
+                                            <li>
+                                                <a href="#">Minor surgery</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Allergy / Immunology</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Flu vaccination</a>
+                                            </li>
+                                        </ul><!--/.dl-submenu-->
+                                    </li>
+                                </ul><!--/.dl-submenu-->
+                            </li>
+                            <li>
+                                <a href="{{ path('sante_doctors') }}">DOCTORS</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('sante_timetable') }}">TIMETABLE</a>
+                            </li>
+                            <li class="active">
+                                <a href="{{ path('sante_forum') }}">Forum</a>
+                                <ul class="dl-submenu">
+                                    <li class="active">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Appointment</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shop</a>
+                                        <ul class="dl-submenu">
+                                            <li>
+                                                <a href="#">Products Page</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Product Details Page</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Cart Page</a>
+                                            </li>
+                                        </ul><!--/.dl-submenu-->
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact</a>
+                                    </li>
+                                </ul><!--/.dl-submenu-->
+                            </li>
+                            <li>
+                                <a href="{{ path('sante_articles') }}">ARTICLES</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('sante_shop') }}">SHOP</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('sante_locate') }}">LOCATE</a>
+                            </li>
+                        </ul><!--/.dl-menu-->
+                    </div><!-- /dl-menuwrapper -->
+                    <!-- Mobile Navigation List End -->
+                    <!-- Cart Right Start -->
+                    <div class="cart-right">
+                        <a class="phone-btn" href="#"><i aria-hidden="true" class="fa fa-phone"></i>+44 725-555-1234</a>
+                        <div class="header-cart">
+                            <a class="headercartbtn" href="#"><i aria-hidden="true" class="fa fa-shopping-cart"></i>
+                                <span id="cartQte">0</span></a>
+                            <div class="cart-down-panel" >
+
+                                <div id="cart">
+
+                                </div>
+
+                                <div class="mini-cart-btn">
+                                    <a id="clearCart" class="btn btn-danger view-cart clear-cart" href="#">clear</a> <a class="btn btn-default checkout" href="{{ path('generer_facture') }}">checkout</a>
+
+
+                                </div><!--/.mini-cart-btn-->
+
+                            </div><!--/.cart-down-panel-->
+                        </div><!--/.header-cart-->
+
+                    </div>
+                </div><!-- Cart Right End -->
+            </div><!--/.navbar yamm navbar-default-->
+        </div><!--/.navigation-menu-->
+    </div><!--/.container-->
+    </div><!-- Header Bottom End -->
+    {% block head %}{% endblock %}
+</header><!-- Header End -->
+
+{% block body %}{% endblock %}
+
+{% block javascripts %}{% endblock %}
+<!-- Footer Start -->
+<footer class="footer clearfix">
+    <div class="container">
+        <!-- Footer Top Start -->
+        <div class="f-top clearfix">
+            <!-- F-Widget Start -->
+            <div class="f-widget clearfix">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 widget-block">
+                        <h6>MEDLIFE</h6><!-- Medlife Start -->
+                        <div class="medlife-block">
+                            <p>Consulting WP - Before we talk destination, we shine a spotlight across your organization
+                                to fully understand its people, processes, and technology.</p>
+                        </div><!-- Medlife End -->
+                    </div><!--/.col-sm-6 col-md-3-->
+                    <div class="col-sm-6 col-md-3 widget-block">
+                        <h6>FORUM</h6><!-- Medlife Start -->
+                        <div class="pages-block clearfix">
+                            <div class="col-xs-6 col-sm-6 col-md-6 padding">
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('sante_home') }}">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('sante_services') }}">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Appointment</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div><!--/.col-xs-6 col-sm-6-->
+                            <div class="col-xs-6 col-sm-6 col-md-6 padding">
+                                <ul>
+                                    <li>
+                                        <a href="#">Pediatry</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Orthodontics</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Cosmetic Solutions</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Cart</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">SHOP</a>
+                                    </li>
+                                </ul>
+                            </div><!--/.col-xs-6 col-sm-6-->
+                        </div><!-- Medlife End -->
+                    </div><!--/.-->
+                    <div class="col-sm-6 col-md-3 widget-block">
+                        <h6>RECENT NEWS</h6><!-- Medlife Start -->
+                        <div class="recent-news-block">
+                            <a class="view-all" href="#">VIEW ALL</a> <!-- News Block Start -->
+                            <div class="news-block">
+                                <a href="#">Ultrasmall nanoparticles kill cancer cells in unusual way</a>
+                                <p><i aria-hidden="true" class="fa fa-clock-o"></i> September 30, 2016</p>
+                            </div>
+                            <div class="news-block">
+                                <a href="#">Ultrasmall nanoparticles kill cancer cells in unusual way</a>
+                                <p><i aria-hidden="true" class="fa fa-clock-o"></i> September 30, 2016</p>
+                            </div><!-- News Block End -->
+                        </div><!-- Medlife End -->
+                    </div><!--/.col-sm-6 col-md-3-->
+                    <div class="col-sm-6 col-md-3 widget-block">
+                        <h6>NEWSLETTER</h6><!-- Medlife Start -->
+                        <div class="news-letter-block">
+                            <p>Recieve our latest news straight to your inbox</p>
+                            <form action="http://your_username.dataserver.list-manage.com/subscribe/post?u=YOUR_API_KEY&amp;id=LIST_ID"
+                                  class="md__newsletter-form" id="mc-embedded-subscribe-form" method="post"
+                                  name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+                                <input class="email form-control" name="EMAIL" placeholder="Email address" required=""
+                                       type="email" value="">
+                                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                    <input name="b_78185f3823fef6dc6a261e0df_2ebd195299" tabindex="-1" type="text"
+                                           value="">
+                                </div>
+                                <button class="btn btn-default" id="mc-embedded-subscribe2" name="SEND" type="submit">
+                                    Subscribe
+                                </button>
+                                <div class="md__newsletter-message"></div>
+                            </form>
+                        </div><!-- Medlife End -->
+                    </div><!--/.col-sm-6 col-md-3-->
+                </div><!--/.row-->
+            </div><!-- F-Widget End -->
+        </div><!-- Footer Top End -->
+        <!-- Footer Bottom Start -->
+        <div class="f-bottom clearfix">
+            <p>Made with ♥ by Hogash.com © 2016 Kallyas.net All rights reserved.</p>
+            <div class="f-social-icons clearfix">
+                <ul>
+                    <li>
+                        <a href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i aria-hidden="true" class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div><!--/.f-social-icons-->
+        </div><!-- Footer Bottom End -->
+    </div><!--/.container-->
+</footer><!-- Footer End -->
+<!-- Modal Start -->
+<!-- Login Modal Start -->
+<div aria-hidden="true" class="modal fade login-modal" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Close Start -->
+            <button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button> <!-- Close End -->
+            <!-- Login Section Start -->
+            <div class="login-block clearfix">
+                <h6>SIGN IN YOUR ACCOUNT TO HAVE ACCESS TO DIFFERENT FEATURES</h6>
+                <form method="post" action="{{ path("fos_user_security_check") }}">
+
+                    <div class="form-group">
+                        <label for="exampleInputtext1">Username</label> <input class="form-control"
+                                                                               id="exampleInputtext1"
+                                                                               placeholder="eg: james_smith"
+                                                                               type="text"
+                        name="_username">
+                    </div><!--/.form-group-->
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label> <input class="form-control"
+                                                                                   id="exampleInputPassword1"
+                                                                                   placeholder="type password"
+                                                                                   type="password"
+                        name="_password">
+                    </div><!--/.form-group-->
+                    <div class="checkbox">
+                        <label><input name="_remember_me" type="checkbox"> REMEMBER ME</label>
+                    </div><!--/.checkbox-->
+                    <button class="btn btn-default" type="submit" name="_submit">Log in</button>
+                    <div class="forgot-password">
+                        <a href="#">FORGOT YOUR PASSWORD?</a>
+                    </div><!--/.forgot-password-->
+                </form>
+            </div><!-- Login Section End -->
+            <!-- Forgot Password Section Start -->
+            <div class="forgot-password-block clearfix">
+                <h6>FORGOT YOUR DETAILS?</h6>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputtext2">Username OR Email</label> <input class="form-control"
+                                                                                        id="exampleInputtext2"
+                                                                                        placeholder="eg: james_smith"
+                                                                                        type="text">
+                    </div>
+                    <button class="btn btn-default" type="submit">SEND MY DETAILS!</button>
+                    <div class="forgot-password">
+                        <a href="#">AAH, WAIT, I REMEMBER NOW!</a>
+                    </div>
+                </form>
+            </div><!-- Forgot Password Section End -->
+        </div><!--/.modal-content-->
+    </div><!--/.modal-dialog-->
+</div><!-- Login Modal End -->
+<!-- Video Modal Start -->
+<div aria-hidden="true" class="modal fade video-modal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!-- Close Start -->
+            <button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button> <!-- Close End -->
+            <iframe allowfullscreen height="500" src="https://www.youtube.com/embed/laYzYkpMztw"></iframe>
+        </div><!--/.modal-content-->
+    </div><!--/.modal-dialog modal-lg-->
+</div><!-- Video Modal End -->
+<!-- Modal End -->
+<!-- Back To Top Start -->
+<div class="back-to-top clearfix">
+    <a href="#"><span><i aria-hidden="true" class="fa fa-chevron-up"></i> Top</span></a>
+</div><!-- Back To Top End -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+{% block scripts %}
+    <script data-cfasync="false" src="{{ asset('js/email-decode.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-3.1.1.min.js') }}">
+    </script> <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+              <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ asset('js/bootstrap.min.js') }}">
+    </script> <!-- Include all compiled plugins (below), or include individual files as needed -->
+              <!-- REVOLUTION JS FILES -->
+    <script src="{{ asset('js/revslider/jquery.themepunch.tools.min.js') }}">
+    </script>
+    <script src="{{ asset('js/revslider/jquery.themepunch.revolution.min.js') }}">
+    </script> <!-- REVOLUTION JS FILES -->
+              <!-- SLIDER REVOLUTION -->
+    <script src='{{ asset('js/revslider/revolution.extension.actions.min.js') }}'>
+    </script>
+    <script src="{{ asset('js/revslider/revolution.extension.layeranimation.min.js') }}">
+    </script>
+    <script src="{{ asset('js/revslider/revolution.extension.navigation.min.js') }}">
+    </script>
+    <script src="{{ asset('js/revslider/revolution.extension.parallax.min.js') }}">
+    </script>
+    <script src='{{ asset('js/revslider/revolution.extension.video.min.js') }}'>
+    </script>
+    <script src="{{ asset('js/revslider/revolution.extension.slideanims.min.js') }}">
+    </script> <!-- SLIDER REVOLUTION -->
+              <!-- Parallax Start -->
+    <script src="{{ asset('js/parallax.js') }}">
+    </script> <!-- Parallax End -->
+              <!-- Ofi-Script -->
+    <script src="{{ asset('js/ofi.js') }}">
+    </script> <!-- Ofi-Script -->
+              <!-- Mobile Menu Js Start -->
+    <script src="{{ asset('js/jquery.dlmenu.js') }}">
+    </script> <!-- Mobile Menu Js End -->
+    <script src="{{ asset('js/slick.js') }}">
+    </script> <!-- Slick Sider -->
+
+    <script src="{{ asset('js/jquery-ui.js') }}">
+    </script> <!-- Range Slide -->
+              <!-- Jquery Ui Date Picker -->
+              <!-- Bootstrap Time Picker -->
+    <script src="{{ asset('js/jquery.timepicker.js') }}">
+    </script> <!-- Bootstrap Time Picker -->
+
+    <script>
+
+        "use strict";
+        //Rev slider
+        var setREVStartSize = function () {
+            try {
+                var e = new Object, i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
+                e.c = jQuery('#rev_slider_1_1');
+                e.responsiveLevels = [1240, 1024, 778, 480];
+                e.gridwidth = [1240, 992, 778, 480];
+                e.gridheight = [868, 768, 960, 720];
+                e.sliderLayout = "fullwidth";
+                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) {
+                        f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+                    }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                    var u = (e.c.width(), jQuery(window).height());
+                    if (void 0 != e.fullScreenOffsetContainer) {
+                        var c = e.fullScreenOffsetContainer.split(",");
+                        if (c) jQuery.each(c, function (e, i) {
+                            u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                        }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+                    }
+                    f = u
+                } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+                e.c.closest(".rev_slider_wrapper").css({height: f})
+            } catch (d) {
+                console.log("Failure at Presize of Slider:" + d)
+            }
+        };
+        setREVStartSize();
+
+        var tpj = jQuery;
+        var revapi1;
+        tpj(document).ready(function () {
+            if (tpj("#rev_slider_1_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_1_1");
+            } else {
+                revapi1 = tpj("#rev_slider_1_1").show().revolution({
+                    sliderType: "standard",
+                    jsFileLocation: "js/",
+                    sliderLayout: "auto",
+                    dottedOverlay: "none",
+                    delay: 9000,
+                    navigation: {
+                        keyboardNavigation: "off",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        mouseScrollReverse: "default",
+                        onHoverStop: "off",
+                        touch: {
+                            touchenabled: "on",
+                            swipe_threshold: 75,
+                            swipe_min_touches: 1,
+                            swipe_direction: "horizontal",
+                            drag_block_vertical: false
+                        },
+                        arrows: {
+                            style: "new-bullet-bar",
+                            enable: true,
+                            hide_onmobile: true,
+                            hide_under: 778,
+                            hide_onleave: false,
+                            left: {
+                                h_align: "left",
+                                v_align: "center",
+                                h_offset: 30,
+                                v_offset: 0
+                            },
+                            right: {
+                                h_align: "right",
+                                v_align: "center",
+                                h_offset: 30,
+                                v_offset: 0
+                            }
+                        },
+                        bullets: {
+                            enable: true,
+                            hide_onmobile: true,
+                            hide_under: 992,
+                            style: "uranus",
+                            hide_onleave: true,
+                            hide_delay: 200,
+                            hide_delay_mobile: 1200,
+                            direction: "horizontal",
+                            h_align: "center",
+                            v_align: "bottom",
+                            h_offset: 0,
+                            v_offset: 220,
+                            space: 10,
+                            tmp: '<span class="tp-bullet-inner"><\/span>'
+                        }
+                    },
+                    responsiveLevels: [1240, 1024, 778, 480],
+                    visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: [1240, 1024, 778, 480],
+                    gridheight: [900, 768, 960, 720],
+                    lazyType: "none",
+                    parallax: {
+                        type: "scroll",
+                        origo: "slidercenter",
+                        speed: 1000,
+                        speedbg: 0,
+                        speedls: 1000,
+                        levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 30],
+                    },
+                    shadow: 0,
+                    spinner: "spinner5",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    fullScreenAutoWidth: "off",
+                    fullScreenAlignForce: "off",
+                    fullScreenOffsetContainer: "",
+                    fullScreenOffset: "",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+                jQuery(document).ready(function () {
+                    jQuery('.hover1').on('hover', function () {
+                        jQuery('.arrow1').stop().animate({
+                            'margin-left': '10px'
+                        }, 200);
+                    }, function () {
+                        jQuery('.arrow1').stop().animate({
+                            'margin-left': '0px'
+                        }, 200);
+                    });
+                    jQuery('.hover2').on('hover', function () {
+                        jQuery('.arrow2').stop().animate({
+                            'margin-left': '10px'
+                        }, 200);
+                    }, function () {
+                        jQuery('.arrow2').stop().animate({
+                            'margin-left': '0px'
+                        }, 200);
+                    });
+                    jQuery('.hover3').on('hover', function () {
+                        jQuery('.arrow3').stop().animate({
+                            'margin-left': '10px'
+                        }, 200);
+                    }, function () {
+                        jQuery('.arrow3').stop().animate({
+                            'margin-left': '0px'
+                        }, 200);
+                    });
+                });
+            }
+        });
+        /*ready*/
+
+    </script>
+    <script src="{{ asset('js/script.js') }}">
+    </script>
+
+
+{% endblock %}
+</body>
+
+<!-- Mirrored from demos.hogash.com/medlife-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jan 2018 23:05:26 GMT -->
+</html>
+

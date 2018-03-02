@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2144eb58-e1ab-44e6-98e1-123e5694df7a" name="Default" comment="" />
+    <list default="true" id="2144eb58-e1ab-44e6-98e1-123e5694df7a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/MgiletNotificationBundle/views/notification_dropdown.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/MgiletNotificationBundle/views/notification_list.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/MgiletNotificationBundle/views/notifications.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SanteBundle/Controller/LocateController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../firstProject/.idea/firstProject.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../firstProject/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../firstProject/.idea/php.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/AppCache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/AppKernel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/Resources/views/base.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/Resources/views/default/index.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/config/config.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/config/config_dev.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/config/config_prod.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/config/config_test.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/config/parameters.yml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/config/routing.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/config/routing_dev.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/config/security.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/config/services.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../bin/console" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../bin/symfony_requirements" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../composer.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../phpunit.xml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/AppBundle/AppBundle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/AppBundle/Controller/DefaultController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tests/AppBundle/Controller/DefaultControllerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../var/SymfonyRequirements.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../var/cache/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../var/logs/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../var/sessions/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/app.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/app_dev.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/apple-touch-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/robots.txt" afterPath="" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +61,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="rechercher.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/rechercher.html.twig">
+      <file leaf-file-name="Comment.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SanteBundle/Entity/Comment.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2265">
+              <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+              <folding>
+                <element signature="e#38#71#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1067">
+              <caret line="50" column="87" lean-forward="false" selection-start-line="50" selection-start-column="87" selection-end-line="50" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing_dev.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -25,31 +93,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VichFileType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/vich/uploader-bundle/Form/Type/VichFileType.php">
+      <file leaf-file-name="security.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="216">
+              <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+              <folding>
+                <marker date="1519964367040" expanded="true" signature="405:510" ph="role_hierarchy: &lt;3 keys&gt;" />
+                <marker date="1519964367040" expanded="true" signature="968:1031" ph="main: &lt;5 keys&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app.php">
+      <file leaf-file-name="locateDetail.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/locateDetail.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-133">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="12" column="88" lean-forward="false" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
+              <folding>
+                <element signature="e#12#28#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="83" column="56" lean-forward="false" selection-start-line="83" selection-start-column="56" selection-end-line="83" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
+      <file leaf-file-name="Estabmishment.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SanteBundle/Entity/Estabmishment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1014">
-              <caret line="39" column="74" lean-forward="false" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+            <state relative-caret-position="-3766">
+              <caret line="103" column="17" lean-forward="false" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocateController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SanteBundle/Controller/LocateController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="85" column="74" lean-forward="false" selection-start-line="85" selection-start-column="74" selection-end-line="85" selection-end-column="74" />
+              <folding>
+                <element signature="e#41#78#0#PHP" expanded="true" />
+                <element signature="e#3277#3321#0#PHP" expanded="true" />
+                <element signature="e#4448#4475#1#PHP" expanded="true" />
+                <element signature="e#4527#4569#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="298" column="62" lean-forward="false" selection-start-line="298" selection-start-column="62" selection-end-line="298" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -73,13 +191,25 @@
       <find>href</find>
       <find>Home</find>
       <find>hom</find>
-      <find>login</find>
       <find>estabmishments</find>
       <find>Route</find>
       <find>add</find>
       <find>loc</find>
       <find>mode</find>
       <find>mapp</find>
+      <find>userm</find>
+      <find>FORU</find>
+      <find>Liste</find>
+      <find>DOCTO</find>
+      <find>listeMembres</find>
+      <find>login</find>
+      <find>class=&quot;x_content&quot;</find>
+      <find>gout</find>
+      <find>slider</find>
+      <find>filter</find>
+      <find>&lt;input type=&quot;submit&quot; class=&quot;btn btn-default&quot; value=&quot;Filter&quot; name=&quot;filter&quot;  /&gt;</find>
+      <find>NameSearch</find>
+      <find>Detail/{id}</find>
     </findStrings>
     <replaceStrings>
       <replace>href=&quot;{{asset</replace>
@@ -87,17 +217,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text=" composer.json require &quot;blackknight467/star-rating-bundle&quot;: &quot;2.*&quot;" />
-      <command text="composer.json require blackknight467/star-rating-bundle: 2.*" />
-      <command text="composer.json require blackknight467/star-rating-bundle: &quot;2.*&quot;" />
-      <command text="composer.phar require &quot;blackknight467/star-rating-bundle&quot;: &quot;2.*&quot;" />
-      <command text="composer.phar require blackknight467/star-rating-bundle : &quot;2.*&quot;" />
-      <command text="bash $ php composer.phar require damianociarla/rating-bundle" />
-      <command text="$ php composer.phar require damianociarla/rating-bundle" />
-      <command text="composer.phar require damianociarla/rating-bundle" />
-      <command text="s doctrine:schema:update " />
-      <command text="s doctrine:generate:entity " />
-      <command text="s doctrine:schema:update" />
       <command text="s doctrine:schema:update --force " />
       <command text="php composer.phar require vich/uploader-bundle" />
       <command text="s doctrine:schema:update --force" />
@@ -112,23 +231,28 @@
       <command text="s doctrine:schema:update --force " />
       <command text="$ composer require mgilet/notification-bundle" />
       <command text="git add." />
+      <command text="php bin/console cache:clear" />
+      <command text="s doctrine:database:create" />
+      <command text="s doctrine:schema:update --force " />
+      <command text="s doctrine:database:create" />
+      <command text="s doctrine:schema:create" />
+      <command text="s doctrine:schema:update --force" />
+      <command text="s doctrine:schema:update --force " />
+      <command text="s doctrine:schema:update" />
+      <command text="s doctrine:schema:update --force " />
+      <command text="s doctrine:generate:entity " />
+      <command text="s doctrine:generate:entities User" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/SanteBundle/Controller/HomeController.php" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/SanteBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/gestionproduit.html.twig" />
-        <option value="$PROJECT_DIR$/src/SanteBundle/Controller/ShopController.php" />
-        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/listemembres.html.twig" />
-        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/listemembre.html.twig.html" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/listemembre.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/profilemembres.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Controller/DoctorsController.php" />
@@ -138,39 +262,48 @@
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/doctors.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/forum.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/services.html.twig" />
-        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/shop.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/timetable.html.twig" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login.html.twig" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register_content.html.twig" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Redirection/AfterloginRedirection.php" />
-        <option value="$PROJECT_DIR$/app/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login_content.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/locateModify.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Form/EstabmishmentFrom.php" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Form/EstabmishmentType.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/adminlayout.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/locateInsert.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/Updatelocate.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/Addlocate.html.twig" />
-        <option value="$PROJECT_DIR$/src/SanteBundle/Controller/LocateController.php" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Entity/Estabmishment.php" />
-        <option value="$PROJECT_DIR$/src/SanteBundle/Redirection/AfterLoginRedirection.php" />
-        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/locate.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/locate.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/Route.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Form/EstabmishmentForm.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Controller/ArticlesController.php" />
-        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/gestionarticle.html.twig" />
         <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/articles.html.twig" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/config/services.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/views/adminlayout.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/SanteBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/Produit/afficherTout.twig" />
+        <option value="$PROJECT_DIR$/src/SanteBundle/Redirection/AfterLoginRedirection.php" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/shop.html.twig" />
+        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/rechercheLocate.html.twig.html" />
+        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/rechercheLocate.html.twig.html" />
+        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/rechercheLocate.html.twig" />
+        <option value="$PROJECT_DIR$/src/SanteBundle/Repository/EstabmishmentRepository.php" />
+        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/locate.html.twig" />
+        <option value="$PROJECT_DIR$/src/SanteBundle/Controller/LocateController.php" />
+        <option value="$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/locateDetail.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       </list>
     </option>
   </component>
@@ -227,12 +360,16 @@
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
       <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
       <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/ob/highcharts-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-json" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="width" value="1376" />
-    <option name="height" value="744" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -250,42 +387,141 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Sante" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="Sante" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SanteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SanteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SanteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SanteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SanteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SanteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SanteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SanteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Administration" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SanteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Administration" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Produit" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SanteInt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sante" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SanteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Default" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
-    <property name="last_opened_file_path" value="D:/Esprit/PIDev/back up/Sante Mehdi" />
+    <property name="last_opened_file_path" value="D:/Esprit/PIDev/back up/Sante Chakib" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sysiph\Documents\GitHub\Sante\web" />
-      <recent name="C:\Users\sysiph\Documents\GitHub\Sante\vendor" />
-      <recent name="C:\Users\sysiph\Documents\GitHub\Sante\src\SanteBundle\Resources\views\Default" />
-      <recent name="C:\Users\sysiph\Documents\GitHub\Sante\src\SanteBundle\Resources\views" />
-      <recent name="C:\Users\sysiph\Documents\GitHub\Sante\src\SanteBundle\Repository" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\Sante\web\images\Estabmishment" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Sante\vendor" />
+      <recent name="C:\wamp64\www\Sante\src\SanteBundle\Resources\views\Administration" />
+      <recent name="C:\wamp64\www\Sante\src\SanteBundle\Resources\views\Default" />
+      <recent name="C:\wamp64\www\Sante\src\SanteBundle\Entity" />
+      <recent name="C:\wamp64\www\Sante\app\Resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -337,21 +573,27 @@
       <workItem from="1519648271106" duration="9523000" />
       <workItem from="1519729804779" duration="9278000" />
       <workItem from="1519742991148" duration="8152000" />
-      <workItem from="1519814301202" duration="2756000" />
+      <workItem from="1519814301202" duration="4539000" />
+      <workItem from="1519928605311" duration="8632000" />
+      <workItem from="1519937338766" duration="8502000" />
+      <workItem from="1519951683883" duration="601000" />
+      <workItem from="1519952350292" duration="1134000" />
+      <workItem from="1519953944320" duration="13593000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325607000" />
+    <option name="totallyTimeSpent" value="359852000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24231333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22767204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35816166" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35816166" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -362,7 +604,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35816166" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -381,148 +622,148 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/registration.xml">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/GroupFormType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="71" lean-forward="false" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="64" lean-forward="false" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/confirmed.html.twig">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/layout1.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ProfileFormType.php">
+    <entry file="file://$PROJECT_DIR$/web/js/panier/panier.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="48" column="42" lean-forward="true" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1849">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/RegistrationController.php">
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Controller/categorieController.php" />
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Entity/Controller/blogController.php" />
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Entity/blog.php" />
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Form/blogType.php" />
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Repository/categorieRepository.php" />
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/blog/new.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/profilemembres.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3993">
+        <state relative-caret-position="-4692">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Entity/User.php">
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/filter.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="-25764">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/listemembre.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MailBundle/Form/MailType.php" />
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Controller/AdminMedcinController.php" />
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Entity/Demande.php" />
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Form/DemandeForm.php" />
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Repository/DemandeRepository.php" />
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Demande/lire.html.twig" />
+    <entry file="file://$PROJECT_DIR$/app/Resources/MgiletNotificationBundle/views/notifications.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/Addlocate.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="72" column="58" lean-forward="false" selection-start-line="72" selection-start-column="58" selection-end-line="72" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Repository/EstabmishmentRepository.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/baseLogin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Entity/Estabmishment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7540">
-          <caret line="292" column="70" lean-forward="false" selection-start-line="292" selection-start-column="70" selection-end-line="292" selection-end-column="70" />
-          <folding>
-            <element signature="e#37#91#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Redirection/AfterLoginRedirection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/locate.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/adminlayout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="118" column="249" lean-forward="false" selection-start-line="118" selection-start-column="249" selection-end-line="118" selection-end-column="249" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/Route.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="152" column="161" lean-forward="false" selection-start-line="152" selection-start-column="161" selection-end-line="152" selection-end-column="161" />
+        <state relative-caret-position="1790">
+          <caret line="76" column="101" lean-forward="false" selection-start-line="76" selection-start-column="101" selection-end-line="76" selection-end-column="101" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SanteBundle/Form/EstabmishmentForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+        <state relative-caret-position="-831">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/locateInsert.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="40" column="43" lean-forward="false" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1519344720068" expanded="true" signature="1540:1554" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/locate.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mgilet/notification-bundle/Twig/NotificationExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#50#108#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Entity/Notification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-349">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -530,34 +771,151 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2113">
+          <caret line="20" column="73" lean-forward="false" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+          <folding>
+            <element signature="e#122#164#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Redirection/AfterLoginRedirection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="41" column="98" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="41" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/shop.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="121" column="52" lean-forward="false" selection-start-line="121" selection-start-column="52" selection-end-line="121" selection-end-column="52" />
+          <folding>
+            <element signature="e#12#28#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/rechercheLocate.html.twig.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/Produit/recherche.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/Produit/afficherTout.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="67" column="70" lean-forward="false" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/rechercheLocate.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="115" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Repository/EstabmishmentRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding>
+            <marker date="1519967637832" expanded="true" signature="357:418" ph="SELECT p FRO... SanteBundle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/locate.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="60" column="93" lean-forward="false" selection-start-line="60" selection-start-column="93" selection-end-line="60" selection-end-column="93" />
+          <folding>
+            <element signature="e#12#28#0#Twig" expanded="true" />
+            <element signature="e#4506#4538#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="298" column="62" lean-forward="false" selection-start-line="298" selection-start-column="62" selection-end-line="298" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Controller/LocateController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="85" column="74" lean-forward="false" selection-start-line="85" selection-start-column="74" selection-end-line="85" selection-end-column="74" />
+          <folding>
+            <element signature="e#41#78#0#PHP" expanded="true" />
+            <element signature="e#3277#3321#0#PHP" expanded="true" />
+            <element signature="e#4448#4475#1#PHP" expanded="true" />
+            <element signature="e#4527#4569#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Entity/Estabmishment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3766">
+          <caret line="103" column="17" lean-forward="false" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Entity/Comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2265">
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <folding>
+            <element signature="e#38#71#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/adminlayout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3406">
-          <caret line="131" column="48" lean-forward="false" selection-start-line="131" selection-start-column="48" selection-end-line="131" selection-end-column="48" />
+        <state relative-caret-position="1067">
+          <caret line="50" column="87" lean-forward="false" selection-start-line="50" selection-start-column="87" selection-end-line="50" selection-end-column="87" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -565,221 +923,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        <state relative-caret-position="216">
+          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
           <folding>
-            <marker date="1518544406685" expanded="true" signature="405:508" ph="role_hierarchy: &lt;3 keys&gt;" />
-            <marker date="1518544406685" expanded="true" signature="1004:1067" ph="main: &lt;5 keys&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/locate.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-152">
-          <caret line="131" column="133" lean-forward="false" selection-start-line="131" selection-start-column="133" selection-end-line="131" selection-end-column="238" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Controller/LocateController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="51" lean-forward="true" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4565">
-          <caret line="23" column="101" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppCache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="61" lean-forward="false" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Article/affiche.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Administration/gestionarticle.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="176" column="14" lean-forward="false" selection-start-line="176" selection-start-column="14" selection-end-line="176" selection-end-column="14" />
-          <folding>
-            <element signature="e#1457#1470#0#Twig" expanded="true" />
-            <element signature="e#3017#3037#0#Twig" expanded="true" />
-            <element signature="e#3146#3166#0#Twig" expanded="true" />
-            <element signature="e#4417#4432#0#Twig" expanded="true" />
-            <element signature="e#6118#6124#0#Twig" expanded="true" />
-            <element signature="e#6235#6241#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2211">
-          <caret line="111" column="61" lean-forward="false" selection-start-line="111" selection-start-column="61" selection-end-line="111" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Form/ArticleType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Entity/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Controller/EvenementController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-83">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Controller/ArticlesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="185" column="1" lean-forward="false" selection-start-line="185" selection-start-column="1" selection-end-line="185" selection-end-column="1" />
-          <folding>
-            <element signature="e#42#75#0#PHP" expanded="true" />
+            <marker date="1519964367040" expanded="true" signature="405:510" ph="role_hierarchy: &lt;3 keys&gt;" />
+            <marker date="1519964367040" expanded="true" signature="968:1031" ph="main: &lt;5 keys&gt;" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+        <state relative-caret-position="52">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Repository/ArticleRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/locateDetail.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="195">
+          <caret line="12" column="88" lean-forward="false" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
           <folding>
-            <marker date="1519747854000" expanded="true" signature="497:554" ph="select m FRO... SanteBundle" />
+            <element signature="e#12#28#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/articles.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="126" column="14" lean-forward="false" selection-start-line="126" selection-start-column="14" selection-end-line="126" selection-end-column="14" />
-          <folding>
-            <element signature="e#757#768#0#Twig" expanded="true" />
-            <element signature="e#1103#1117#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/evenements.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-components/doc/pager/intro.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SanteBundle/Resources/views/Default/rechercher.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/vich/uploader-bundle/Form/Type/VichFileType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1014">
-          <caret line="39" column="74" lean-forward="false" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+        <state relative-caret-position="258">
+          <caret line="83" column="56" lean-forward="false" selection-start-line="83" selection-start-column="56" selection-end-line="83" selection-end-column="56" />
           <folding />
         </state>
       </provider>

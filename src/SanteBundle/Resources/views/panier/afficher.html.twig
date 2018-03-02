@@ -1,0 +1,39 @@
+
+    <ul class="cart-list">
+       {% for p in products %}
+           <li class="mini-cart-item " id="my-cart-item{{ p.id }}" >
+               <button aria-label="Close" class="close" type="button"><span aria-hidden="true" onclick="deleteItem({{ p.id }})" i>×</span></button>
+               <div class="row">
+                   <div class="col-xs-4 col-sm-4 col-md-4">
+                       <div class="mini-cart-image"><img alt="" class="img-responsive" src="{{ asset('images1/'~p.nom ~'.jpg') }}"></div>
+                   </div>
+                   <div class="col-xs-8 col-sm-8 col-md-8 pad-left">
+                       <div class="mini-cart-detail">
+                           <a href="#">{{ p.nom }}</a>
+                       </div>
+                       <div class="mini-cart-detail">
+                           {{ p.qteCommande }}
+                       </div>
+                   </div><!--/.col-xs-8 col-sm-8 col-md-8 pad-left-->
+               </div><!--/.row-->
+           </li><!--/.mini-cart-item-->
+        {% endfor %}
+    </ul><!--/.cart-list-->
+    <div class="total">
+        <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <div class="total-left">
+                    <p>subtotal</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="total-right">
+                    <p>{{sum}}</p>
+                </div>
+            </div><!--/.col-sm-6 col-md-6-->
+        </div><!--/.row"-->
+    </div><!--/.total-->
+
+
+
+

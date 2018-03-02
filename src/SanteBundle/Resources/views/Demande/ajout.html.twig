@@ -1,0 +1,105 @@
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Hospital</title><!-- Favicon -->
+    <link href="{{ asset('images/favicon.ico')}}" rel="icon" type="image/x-icon"><!-- Font Awesome -->
+    <link href="{{ asset('fonts/font-awesome.min.css')}}" rel="stylesheet"><!-- Bootstrap -->
+    <link href="{{ asset('css/bootstrap.css')}}" rel="stylesheet"><!--=== Add By Designer ===-->
+    <link href="{{ asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('fonts/fonts.css')}}" rel="stylesheet"><!-- Yamm Megamenu -->
+    <link href="{{ asset('css/yamm.css')}}" rel="stylesheet"><!-- Animation -->
+    <link href="{{ asset('css/animate.css')}}" rel="stylesheet"><!-- Animation -->
+    <!-- Flat Icon -->
+    <link href="{{ asset('fonts/flaticon.css')}}" rel="stylesheet"><!-- Flat Icon -->
+    <!-- Multi Level Push Menu -->
+    <link href="{{ asset('css/normalize.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/component.css')}}" rel="stylesheet">
+    <script src="{{ asset('js/modernizr.custom.js')}}">
+    </script><!-- Multi Level Push Menu -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link href="{{ asset('js/revslider/settings.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('js/revslider/layers.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('js/revslider/navigation.css')}}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+</head>
+
+{% block body %}
+
+    <!-- barre bleu-->
+        <div class="breadcrumb-title clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                        <div class="breadcrumb-left">
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6">
+                        <div class="breadcrumb-right">
+
+                            <h5>Ajouter un rendez-vous</h5>
+
+                        </div>
+
+                    </div>
+                </div><!--/.row-->
+            </div>
+        </div><!-- Breadcrumb End -->
+
+    <!-- ancien formulaire -->
+
+
+
+
+    <!-- nouveau formulaire-->
+    <div class="panel panel panel-primary" style="margin-left: 400px;margin-right:400px;margin-top: 100px;">
+
+        <div class="panel-body">
+
+        <br>
+               <center> <h1 font="bold" style="color: #7ED321;font: 'Lucida Grande';">Selectionner votre rendez-vous</h1></center>
+
+                {{ form_start(form) }}
+                    <br/><br/><
+
+
+                    <table class="table" >
+                        <tr>
+                            <th>date</th>
+                            <td> {{ form_widget(form.date, { 'attr': {'class':'form-control'}}) }} </td>
+                        </tr>
+                        <tr>
+                            <th>heure</th>
+                            <td> {{ form_widget(form.heure, { 'attr': {'class':'form-control'}}) }} </td>
+                        </tr>
+
+                        <tr>
+                            <th>Medcin</th>
+                            <td> {{ form_widget(form.user, { 'attr': {'class':'form-control'}}) }} </td>
+                        </tr>
+
+                    </table>
+                    <center>
+                        {{ form_widget(form.Enregistrer, { 'attr': {'class':'btn btn-info btn-lg ' }}) }}
+                        <form action="{{ path(  'medcin'  ) }}">
+
+                            <button type="submit" class="btn btn-info btn-lg   "  >retour</button>
+                        </form>
+
+
+                {{ form_end(form) }}
+
+            <br><br>
+
+        </div>
+
+
+    </div>
+
+
+{% endblock %}

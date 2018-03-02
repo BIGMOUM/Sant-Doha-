@@ -1,0 +1,114 @@
+{% extends "::adminlayout.html.twig" %}
+
+
+  {% block title_right %}
+      <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+          <div class="input-group">
+
+              <input type="text" class="form-control" placeholder="Rechercher produit" id="nom">
+
+          </div>
+      </div>
+  {% endblock %}
+
+{% block body %}
+    <!-- page content -->
+
+
+
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Projects</h2>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+
+
+
+                            <!-- start project list -->
+
+                            <table class="table table-striped projects">
+                                <thead>
+                                <tr>
+                                    <th style="width: 1%">id</th>
+                                    <th >Nom</th>
+                                    <th style="width: 20%">Lastname</th>
+                                    <th>Email</th>
+
+                                    <th style="width: 20%">#Edit</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for i in users %}
+
+                                    <tr>
+                                        <td>{{ i.id }}</td>
+                                        <td>{{ i.username  }}</td>
+                                        <td>{{ i.lastname  }}</td>
+                                        <td></td>
+                                        <td>{{ i.email  }}</td>
+
+                                        <td>
+                                            <a href="{{ path('View_membre',{'id':i.id}) }}" class="btn btn-primary btn-xs"><i
+                                                        class="fa fa-folder"></i> View </a>
+
+                                            <a href="{{ path('Supprimer_membre', {'id':i.id}) }}"
+                                               class="btn btn-danger btn-xs"> <i class="fa fa-trash-o"></i> Delete </a>
+                                        </td>
+                                    </tr>
+
+                                {% endfor %}
+
+                                </tbody>
+                            </table>
+                            <!-- end project list -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- /page content -->
+    <div class="page-list clearfix">
+        <ul class="pagination">
+            {# display navigation #}
+
+            {{ knp_pagination_render(pagination) }}
+
+        </ul>
+        <!--/.pagination-->
+    </div>
+{% endblock %}
+
+{% block scripts %}
+
+    {{ parent() }}
+
+    <script>
+        $('#nom').keyup(function () {
+            // on va recuperer la valeur de l'input nom
+            var input = $('#nom').val();
+            $.ajax({
+                type: 'post',
+                url: '{{ path('Recherche_Membres') }}',
+                data: {'nom': input},
+
+                success: function (data) {
+
+                    $('#t').html(data);
+
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,3 +1,4 @@
+{% trans_default_domain 'FOSUserBundle' %}
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -38,36 +39,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 col-md-4">
-                    <div class="h-left">
-                        <p><span><i aria-hidden="true" class="fa fa-clock-o"></i> OPENED ON WEEKDAYS FROM</span> 8:30 AM TO 6:30 PM</p>
-                    </div>
+
                 </div>
                 <div class="col-sm-8 col-md-8">
                     <div class="h-right">
-                        <!-- History Policy Start -->
+
+
+                        <div class="h-login-register clearfix">
+                            <a class="hidden-xs"  href="{{ path('fos_user_profile_show') }}">My Profile&nbsp;&nbsp;</a>
+                        </div>
+                        <div class="h-login-register clearfix">
+                            <a class="hidden-xs"  href="{{ path('fos_user_security_logout') }}">Logout&nbsp;&nbsp;</a>
+                        </div>
                         <div class="h-history-policy clearfix">
-                            <div class="burger hidden-lg">
-                                <a href="#"><span></span> <span></span> <span></span></a>
-                            </div>
                             <ul>
-                                <li>
-                                    <a href="#">History</a>
-                                </li>
-                                <li>
-                                    <a href="#">Careers</a>
-                                </li>
-                                <li>
-                                    <a href="#">News</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
+                                <li> {{ mgilet_notification_render({ 'display': 'dropdown', 'seen': false }) }}
                                 </li>
                             </ul>
                         </div><!-- History Policy End -->
                         <!-- Login-Register Start -->
-                        <div class="h-login-register clearfix">
-                            <a class="hidden-xs" data-target=".login-modal" data-toggle="modal" href="#">Login</a> <a class="visible-xs" data-target=".login-modal" data-toggle="modal" href="#"><i aria-hidden="true" class="fa fa-sign-in"></i></a>
-                        </div><!-- Login-Register End -->
                     </div><!--/.h-right-->
                 </div><!--/.col-sm-8 col-md-8"-->
             </div><!--/.row-->
@@ -79,113 +69,23 @@
             <div class="navigation-menu">
                 <div class="navbar yamm navbar-default">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="{{ path('sante_home') }}"><img alt="" class="hidden-xs hidden-sm" src="{{ asset('images/logo.png')}}"> <img alt="" class="visible-xs visible-sm" src="{{ asset('images/mobile-logo.png')}}"></a>
+                        <a class="navbar-brand" href="{{ path('sante_home') }}"><img alt="" class="hidden-xs hidden-sm"
+                                                                                     src="{{ asset('images/logo.png') }}">
+                            <img alt="" class="visible-xs visible-sm" src="{{ asset('images/mobile-logo.png') }}"></a>
                     </div><!-- Desktop Navigation List Start -->
                     <div class="navbar-collapse collapse hidden-xs" id="navbar-collapse-1">
                         <div class="background"></div>
                         <ul class="nav navbar-nav">
                             <li class="dropdown active">
                                 <a class="dropdown-toggle" href="{{ path('sante_home') }}">HOME</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#">MedLife – Annapolis</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MedLife – Germantown</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MedLife – Columbia</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MedLife – Olney</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MedLife – Pasadena</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MedLife – Pikesville</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MedLife – Waldorf</a>
-                                    </li>
-                                </ul><!--/.dropdown-menu-->
-                            </li><!--/.dropdown-->
-                            <li class="dropdown yamm-fw">
-                                <a class="dropdown-toggle" href="{{ path('sante_services') }}">SERVICES</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <!-- Content container to add padding -->
-                                        <div class="yamm-content">
-                                            <div class="row">
-                                                <ul class="col-md-3 list-unstyled">
-                                                    <li>
-                                                        <a class="mega-menu-title" href="#">CATEGORY 1</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">General & Preventive Care</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Cosmetic Solutions</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Restorative Solutions</a>
-                                                    </li>
-                                                </ul><!--/.col-md-3-->
-                                                <ul class="col-md-3 list-unstyled">
-                                                    <li>
-                                                        <a class="mega-menu-title" href="#">CATEGORY 2</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Additional Treatments</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Orthodontics</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Dentures & Denture Repair</a>
-                                                    </li>
-                                                </ul><!--/.col-md-3-->
-                                                <ul class="col-md-3 list-unstyled">
-                                                    <li>
-                                                        <a class="mega-menu-title" href="#">CATEGORY 3</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Diagnostic & Preventive</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Pediatric Dentistry</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Phisiotheraphy</a>
-                                                    </li>
-                                                </ul><!--/.col-md-3-->
-                                                <ul class="col-md-3 list-unstyled">
-                                                    <li>
-                                                        <a class="mega-menu-title" href="#">CATEGORY 4</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Minor surgery</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Allergy / Immunology</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Flu vaccination</a>
-                                                    </li>
-                                                </ul><!--/.col-md-3-->
-                                            </div><!--/.row-->
-                                        </div><!--/.yamm-content-->
-                                    </li>
-                                </ul><!--/.dropdown-menu-->
-                            </li><!--/.dropdown yamm-fw active-->
+
+
                             <li>
-                                <a href="{{ path('sante_doctors') }}">DOCTORS</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('sante_timetable') }}">TIMETABLE</a>
+                                <a href="{{ path('medcin') }}">DOCTORS</a>
                             </li>
                             <li class="dropdown active">
-                                <a class="dropdown-toggle" href="{{ path('sante_forum') }}">FORUM</a>
+                                <a class="dropdown-toggle" href="{{ path('Voir') }}">FORUM</a>
+
                                 <ul class="dropdown-menu">
                                     <li class="active">
                                         <a href="#">Home</a>
@@ -274,29 +174,7 @@
                         <ul class="dl-menu">
                             <li class="active">
                                 <a href="{{ path('sante_home') }}">HOME</a>
-                                <ul class="dl-submenu">
-                                    <li>
-                                        <a href="#">MedLife – Annapolis</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MedLife – Germantown</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MedLife – Columbia</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MedLife – Olney</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MedLife – Pasadena</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MedLife – Pikesville</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MedLife – Waldorf</a>
-                                    </li>
-                                </ul><!--/.dl-submenu-->
+
                             </li>
                             <li class="active">
                                 <a href="{{ path('sante_services') }}">SERVICES</a>
@@ -360,47 +238,12 @@
                                 </ul><!--/.dl-submenu-->
                             </li>
                             <li>
-                                <a href="{{ path('sante_doctors') }}">DOCTORS</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('sante_timetable') }}">TIMETABLE</a>
+                                <a href="{{ path('medcin') }}">DOCTORS</a>
                             </li>
                             <li class="active">
-                                <a href="{{ path('sante_forum') }}">Forum</a>
-                                <ul class="dl-submenu">
-                                    <li class="active">
-                                        <a href="#">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Services</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Appointment</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Blog</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Shop</a>
-                                        <ul class="dl-submenu">
-                                            <li>
-                                                <a href="#">Products Page</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Product Details Page</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Cart Page</a>
-                                            </li>
-                                        </ul><!--/.dl-submenu-->
-                                    </li>
-                                    <li>
+                                <a href="{{ path('Voir') }}">Forum</a>
                                         <a href="#">Contact</a>
-                                    </li>
-                                </ul><!--/.dl-submenu-->
+                                <!--/.dl-submenu-->
                             </li>
                             <li>
                                 <a href="{{ path('sante_articles') }}">ARTICLES</a>
@@ -418,47 +261,29 @@
                     <div class="cart-right">
                         <a class="phone-btn" href="#"><i aria-hidden="true" class="fa fa-phone"></i>+44 725-555-1234</a>
                         <div class="header-cart">
-                            <a class="headercartbtn" href="#"><i aria-hidden="true" class="fa fa-shopping-cart"></i> <span>1</span></a>
-                            <div class="cart-down-panel">
-                                <ul class="cart-list">
-                                    <li class="mini-cart-item">
-                                        <button aria-label="Close" class="close" type="button"><span aria-hidden="true">&times;</span></button>
-                                        <div class="row">
-                                            <div class="col-xs-4 col-sm-4 col-md-4">
-                                                <div class="mini-cart-image"><img alt="" class="img-responsive" src="{{ asset('images/mini-cart-img.jpg')}}"></div>
-                                            </div>
-                                            <div class="col-xs-8 col-sm-8 col-md-8 pad-left">
-                                                <div class="mini-cart-detail">
-                                                    <a href="#">Oven Roasted duck with special sousage</a>
-                                                </div>
-                                            </div><!--/.col-xs-8 col-sm-8 col-md-8 pad-left-->
-                                        </div><!--/.row-->
-                                    </li><!--/.mini-cart-item-->
-                                </ul><!--/.cart-list-->
-                                <div class="total">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-md-6">
-                                            <div class="total-left">
-                                                <p>subtotal</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-md-6">
-                                            <div class="total-right">
-                                                <p>$35</p>
-                                            </div>
-                                        </div><!--/.col-sm-6 col-md-6-->
-                                    </div><!--/.row"-->
-                                </div><!--/.total-->
+                            <a class="headercartbtn" href="#"><i aria-hidden="true" class="fa fa-shopping-cart"></i>
+                                <span id="cartQte">0</span></a>
+                            <div class="cart-down-panel" >
+
+                                <div id="cart">
+
+                                </div>
+
                                 <div class="mini-cart-btn">
-                                    <a class="btn btn-default view-cart" href="#">view cart</a> <a class="btn btn-simple checkout" href="#">checkout</a>
+                                    <a id="clearCart" class="btn btn-danger view-cart clear-cart" href="#">clear</a> <a class="btn btn-default checkout" href="{{ path('generer_facture') }}">checkout</a>
+
+
                                 </div><!--/.mini-cart-btn-->
+
                             </div><!--/.cart-down-panel-->
                         </div><!--/.header-cart-->
-                    </div><!-- Cart Right End -->
+
+                    </div>
+                </div><!-- Cart Right End -->
                 </div><!--/.navbar yamm navbar-default-->
             </div><!--/.navigation-menu-->
         </div><!--/.container-->
-    </div><!-- Header Bottom End -->
+    <!-- Header Bottom End -->
     {% block head %}{% endblock %}
 </header><!-- Header End -->
         {% block formulaire %}{% endblock %}
@@ -819,6 +644,86 @@
 
 </script>
 <script src="{{ asset('js/script.js')}}">
+</script>
+
+<script>
+
+    function renderCart() {
+
+
+        $.ajax({
+            url: '{{ url('afficher_panier') }}',
+
+
+            success: function (data) {
+
+                $('#cart').html(data);
+            }
+        });
+
+        $.ajax({
+            url: '{{ path('nombre_produits') }}',
+            type: 'GET',
+            data: {},
+            success: function (data) {
+                $('#cartQte').html(data);
+
+            }
+        });
+
+
+    }
+
+    $(document).ready(function () {
+        $('#load').hide();
+        renderCart();
+        /* var timeout =  setInterval(function(){
+             renderCart();
+         },2000);
+
+          window.onbeforeunload = function(){
+              clearInterval(timeout);
+          }*/
+    });
+
+
+    function deleteItem(id) {
+        $('#load').show();
+        $.ajax({
+            url: '{{ url('supprimer_produit_du_panier') }}',
+            type: 'POST',
+            data: {'id': id},
+            success: function () {
+                $('#load').hide();
+                renderCart();
+            }
+        });
+    }
+
+
+    function clearCart() {
+
+        console.log('clicked');
+        $.ajax({
+            url:'{{ path('vider_panier') }}',
+            success:function(){
+                renderCart();
+            }
+        })
+
+
+    }
+
+    $('#clearCart').on('click',function () {
+        clearCart();
+    });
+
+
+
+
+
+
+
 </script>
 </body>
 

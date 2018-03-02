@@ -1,0 +1,8 @@
+
+indexMailMailbundle:
+    path:     /indexMails
+    defaults: { _controller: MailBundle:Mail:index }
+
+success_mailMailbundle:
+    path:     /successMails
+    defaults: { _controller: MailBundle:Mail:successMail }

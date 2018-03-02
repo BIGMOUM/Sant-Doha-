@@ -1,0 +1,11 @@
+{% for p in estabmishment %}
+    <tr>
+        <td><img src="{{ asset('images/Estabmishment/') }}{{ p.nameImage }}" style="width: 50px;height: 30px"></td>
+        <td>{{ p.nom }}</td>
+        <td>{{ p.adress }}</td>
+        <td>{{ p.telephone }}</td>
+        <td>{{ p.web }}</td>
+        <td>{{ p.rating| rating }}</td>
+
+    </tr>
+{% endfor %}

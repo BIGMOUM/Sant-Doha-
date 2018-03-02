@@ -1,0 +1,89 @@
+{% trans_default_domain 'FOSUserBundle' %}
+    {% block styles %}
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <!-- Website CSS style -->
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+        <!-- Website Font style -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ asset('css/signup.css') }}">
+        <!-- Google Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+    {% endblock %}
+
+
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row main">
+            <div class="main-login main-center">
+                <br>
+
+
+                {% if error %}
+                    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                <form action="{{ path("fos_user_security_check") }}" method="post" style="margin-top: 10%">
+                    {% if csrf_token %}
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                    {% endif %}
+
+
+
+
+
+                    <div class="form-group">
+                        <label for="username" class="cols-sm-2 control-label">{{ 'username'|trans }}</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="_username" id="username"  placeholder="Enter your Username" value="{{ last_username }}" required="required" autocomplete="username"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="cols-sm-2 control-label">{{ 'password'|trans }}</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="password" class="form-control" name="_password" id="password"  placeholder="Enter your Password" required="required" autocomplete="current-password"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                    <label for="remember_me">{{ 'remember me'|trans }}</label>
+
+
+
+
+                    <div class="form-group ">
+                        <input type="submit" id="_submit" name="_submit" value="{{ 'Register'|trans }}" class="btn btn-primary btn-lg btn-block login-button" />
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+
+

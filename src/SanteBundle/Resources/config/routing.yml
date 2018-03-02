@@ -20,10 +20,6 @@ sante_articles:
     path:     /Articles
     defaults: { _controller: SanteBundle:Articles:Articles }
 
-sante_shop:
-    path:     /Shop
-    defaults: { _controller: SanteBundle:Shop:Shop }
-
 sante_locate:
     path:     /Locate
     defaults: { _controller: SanteBundle:Locate:List }
@@ -40,66 +36,50 @@ sante_index:
     path:     /admin/stat1
     defaults: { _controller: SanteBundle:Home:index }
 sante_index2:
-    path:     /stat2
+    path:     /admin/stat2
     defaults: { _controller: SanteBundle:Home:index2 }
 
 sante_index3:
-    path:     /stat3
+    path:     /admin/stat3
     defaults: { _controller: SanteBundle:Home:index3 }
 
-sante_GestionProduit:
-    path:     /ShopAdmin
-    defaults: { _controller: SanteBundle:Shop:ShopAdmin }
-
 sante_AdminLocate:
-    path:     /LocateAdmin
+    path:     /admin/LocateAdmin
     defaults: { _controller: SanteBundle:Locate:LocateAdmin }
 
 sante_AdminAddLocate:
-    path:     /AddLocateAdmin
+    path:     /admin/AddLocateAdmin
     defaults: { _controller: SanteBundle:Locate:AddLocateAdmin }
 
 sante_AdminUpdateLocate:
-    path:     /UpdateLocateAdmin/{id}
+    path:     /admin/UpdateLocateAdmin/{id}
     defaults: { _controller: SanteBundle:Locate:UpdateLocateAdmin }
 
 sante_AdminDeleteLocate:
-    path:     /DeleteLocateAdmin/{id}
+    path:     /admin/DeleteLocateAdmin/{id}
     defaults: { _controller: SanteBundle:Locate:DeleteLocateAdmin}
 
 sante_GestionArticles:
-    path:     /ArticlesAdmin
+    path:     /admin/ArticlesAdmin
     defaults: { _controller: SanteBundle:Articles:ArticlesAdmin }
 
-sante_ListeMembres:
-    path:     /ListemembresAdmin
-    defaults: { _controller: SanteBundle:Doctors:Listemembres }
-
-sante_ProfileMembres:
-    path:     /ProfilemembresAdmin
-    defaults: { _controller: SanteBundle:Doctors:Profilemembres }
-
-sante_Filter:
-    path:     /FilterAdmin
-    defaults: { _controller: SanteBundle:Forum:Filter }
-
 sante_article:
-    path:     /ajout
+    path:     /admin/ajout
     defaults: { _controller: SanteBundle:Articles:ajout }
 sante_evenement:
     path:     /ajout1
     defaults: { _controller: SanteBundle:Evenement:ajoutE }
 sante_article_update:
-    path:     /update{id}
+    path:     /admin/update{id}
     defaults: { _controller: SanteBundle:Articles:update }
 sante_article_delete:
-    path:     /delete{id}
+    path:     /admin/delete{id}
     defaults: { _controller: SanteBundle:Articles:delete }
 update:
-    path:     /update1/{id}
+    path:     /admin/update1/{id}
     defaults: { _controller: SanteBundle:Evenement:updateE }
 delete:
-    path:     /delete1/{id}
+    path:     /admin/delete1/{id}
     defaults: { _controller: SanteBundle:Evenement:deleteE }
 Recherche_DQL_serie_ajax_parameter:
     path:     /Articles/
@@ -111,3 +91,216 @@ rechercherC:
     path:     /rechercherP
     defaults: { _controller: SanteBundle:Articles:rechercheP}
 
+ajout_produit:
+    path:     /admin/AjoutProduit
+    defaults: { _controller: SanteBundle:Shop:createAdmin }
+
+gestion_produit:
+    path:     /admin/ListProduit
+    defaults: { _controller: SanteBundle:Shop:listAdmin }
+
+Supprimer_produit:
+    path:     /admin/SupprimerProduit/{id}
+    defaults: { _controller: SanteBundle:Shop:supprimerAdmin }
+
+Update_produit:
+    path:     /admin/EditProduit/{id}
+    defaults: { _controller: SanteBundle:Shop:updateAdmin }
+
+view_produit:
+    path:     /viewProduit/{id}
+    defaults: { _controller: SanteBundle:Shop:viewAdmin }
+
+recherche_produit:
+    path:     /rechercheProduit
+    defaults: { _controller: SanteBundle:Shop:Recherche }
+
+sante_shop:
+    path:     /Shop
+    defaults: { _controller: SanteBundle:Shop:clientShop }
+
+sante_shopDetail:
+    path:     /ShopDetail/{id}
+    defaults: { _controller: SanteBundle:Shop:clientShopDetail }
+
+Recherche_ajax:
+    path:     /recherche
+    defaults: { _controller: SanteBundle:Shop:Recherche }
+
+affiche_catégorie:
+    path:     /Shop/{categorie}
+    defaults: { _controller: SanteBundle:Shop:findByCategorie }
+
+affiche_catégorie_admin:
+    path:     /ListProduit/{categorie}
+    defaults: { _controller: SanteBundle:Shop:findByCategorieAdmin }
+
+afficher_panier:
+    path:     /panier/afficher
+    defaults: { _controller: SanteBundle:Panier:render }
+
+ajouter_au_panier:
+    path:     /panier/add
+    defaults: { _controller: SanteBundle:Panier:add }
+
+nombre_produits:
+    path:     /panier/count
+    defaults: { _controller: SanteBundle:Panier:count }
+
+supprimer_produit_du_panier:
+    path:     /panier/delete
+    defaults: { _controller: SanteBundle:Panier:delete }
+
+vider_panier:
+    path:     /panier/clear
+    defaults: { _controller: SanteBundle:Panier:clear }
+
+generer_facture:
+    path:     /panier/bill
+    defaults: { _controller: SanteBundle:Panier:facture }
+
+admin_profiles_affiche:
+    path:     /admin/profiles
+    defaults: { _controller: SanteBundle:User:profilesAdmin }
+
+
+Supprimer_membre:
+    path:     /admin/SupprimerMembre/{id}
+    defaults: { _controller: SanteBundle:User:supprimer }
+
+
+View_membre:
+    path:     /admin/viewMembre/{id}
+    defaults: { _controller: SanteBundle:User:Detail }
+
+Recherche_Membres:
+    path:     /recherche
+    defaults: { _controller: SanteBundle:User:Recherche }
+
+
+Admin_detail:
+    path:     /admin
+    defaults: { _controller: SanteBundle:User:Recherche }
+
+newK:
+    path:     /neww
+    defaults: { _controller: SanteBundle:blog:new }
+
+neW:
+    path:     /newx/{blog_id}
+    defaults: { _controller: SanteBundle:Comment:new }
+
+blogshow:
+    path:     /ind/{blog_id}
+    defaults: { _controller: SanteBundle:blog:index }
+
+newcategorie:
+    path:     /newf
+    defaults: { _controller:  SanteBundle:categorie:new }
+
+Voir:
+      path:     /vi
+      defaults: { _controller: SanteBundle:blog:voir}
+
+sante_ListeMembres:
+    path:     /admin/ListemembresAdmin
+    defaults: { _controller: SanteBundle:Comment:commentAdmin}
+sante_ProfileMembres:
+    path:     /admin/ProfilemembresAdmin
+    defaults: { _controller: SanteBundle:categorie:catAdmin }
+
+sante_Filter:
+    path:     /admin/FilterAdmin
+    defaults: { _controller: SanteBundle:blog:blogAdmin }
+
+sante_blog_delete:
+    path:     /delete/{id}
+    defaults: { _controller: SanteBundle:blog:delete }
+sante_comment_delete:
+    path:     /deletec/{id}
+    defaults: { _controller: SanteBundle:Comment:delete }
+delete_categorie:
+    path:      /delett/{id}
+    defaults: { _controller: SanteBundle:categorie:SupprimerCategorie }
+
+
+Recherche_DQL:
+    path:     /recherchecat
+    defaults: { _controller: SanteBundle:blog:Searchcategorie}
+
+
+medcin:
+    path:     /medcin
+    defaults: { _controller: SanteBundle:Medcin:medcin }
+
+
+ajoutMedcin:
+    path:     /ajoutMedcin
+    defaults: { _controller: SanteBundle:Medcin:ajout }
+
+
+
+modifierMedcin:
+    path:     /modifierMedcin
+    defaults: { _controller: SanteBundle:Medcin:modifier }
+
+supprimerMedcin:
+    path:     /supprimerMedcin
+    defaults: { _controller: SanteBundle:Medcin:supprimer }
+
+liste_membres:
+    path:     /listeMembres
+    defaults: { _controller: SanteBundle:Medcin:listeMembres }
+
+
+#les rendez vous
+
+ajoutDemande:
+    path:     /ajoutDemande
+    defaults: { _controller: SanteBundle:Demande:ajout }
+
+lireDemande:
+    path:     /lireDemande/{idm}
+    defaults: { _controller: SanteBundle:Demande:lire }
+
+modifierDemande:
+    path:     /modifierDemande/{idm}/{id}
+    defaults: { _controller: SanteBundle:Demande:modifier }
+
+supprimerDemande:
+    path:     /supprimerAction/{idm}/{id}
+    defaults: { _controller: SanteBundle:Demande:supprimer }
+successDemande:
+    path:     /successDemande
+    defaults: { _controller: SanteBundle:Demande:successDemande }
+
+#les mails
+
+indexMail:
+    path:     /indexMail
+    defaults: { _controller: SanteBundle:Mail:index }
+
+success_mail:
+    path:     /successMail
+    defaults: { _controller: SanteBundle:Mail:successMail }
+
+# les routes de amdinistrateur des medcins
+
+lireAdminMedcin:
+    path:     /admin/lireAdminMedcin
+    defaults: { _controller: SanteBundle:AdminMedcin:lire }
+supprimerAdminMedcin:
+    path:     /admin/supprimerAdminMedcin/{id}
+    defaults: { _controller: SanteBundle:AdminMedcin:supprimer }
+
+
+sante_LocateDetail:
+    path:     /Detail/{id}
+    defaults: { _controller: SanteBundle:Locate:LocateDetail }
+
+sante_stat:
+    path:     /admin/stat
+    defaults: { _controller: SanteBundle:Shop:chartLine}
+recherche_Locate:
+    path:     /rechercheLocate
+    defaults: { _controller: SanteBundle:Locate:RechercheLocate }

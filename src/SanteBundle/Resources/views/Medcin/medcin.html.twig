@@ -1,0 +1,96 @@
+{% extends "::base.html.twig" %}
+{% block head %}
+
+    <!-- Jquery Ui Date Picker -->
+    <!-- Range Slider Start -->
+    <link href="{{ asset('css/jquery-ui.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/jquery-ui-slider-pips.css')}}" rel="stylesheet"><!-- Range Slider End -->
+    <!-- Jquery Ui Date Picker -->
+    <!-- Boostrap Time Picker -->
+    <link href="{{ asset('css/jquery.timepicker.css')}}" rel="stylesheet"><!-- Boostrap Time Picker -->
+    <!-- Selectric Start -->
+    <link href="{{ asset('css/selectric.css')}}" rel="stylesheet"><!-- Selectric End -->
+    <!-- Multi Level Push Menu -->
+    <link href="{{ asset('css/normalize.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/component.css')}}" rel="stylesheet">
+    <script src="{{ asset('js/modernizr.custom.js')}}">
+    </script><!-- Multi Level Push Menu -->
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link href="{{ asset('js/revslider/settings.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('js/revslider/layers.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('js/revslider/navigation.css')}}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+    <!-- Slick Slider -->
+    <link href="{{ asset('css/slick-slider/slick.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/slick-slider/slick-theme.css')}}" rel="stylesheet"><!-- Slick Slider -->
+{% endblock %}
+{% block body %}
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <!-- la barre bleu-->
+
+
+    <div class="panel panel panel-primary" style="margin: 20px;">
+        <div class="panel-body">
+            <center>
+                <h1 style="color: #7ED321">Liste des medcins </h1>
+                <h4>Vous pouvez voir la disponiblités des medcins et le envoyer des mails  </h4> <br/>
+
+                <form action="{{ path(  'ajoutDemande'  ) }}">
+
+                    <button type="submit" class="btn btn-info btn-lg " style="color: #3b003b"> Rendez-vous avec docteur ?</button>
+
+
+
+                    <form action="{{ path( 'indexMail'  ) }}">
+
+                        <button type="submit" class="btn btn-info btn-lg   " style="color: #3b003b" >envoyer mail a un docteur ?</button>
+                    </form>
+
+            </center>
+
+        </div>
+    </div>
+
+    <section class="content inner-pg service-pg clearfix"style="margin: 20px">
+            <div class="clearfix" >
+
+                <div class="human-body-parts clearfix" style="margin: 10px">
+                        <div class="row">
+                            {% for m in medcinsqb %}
+
+
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+
+                                <div class="body-parts-block">
+                                    <div class="right col-xs-5 text-center">
+                                        <img src="{{ asset('BackOffice/images/user.png')}}" alt="" class="img-circle img-responsive">
+                                    </div>
+                                    <h6 style="color: #7ED321">{{ m.username }}</h6>
+                                    <p >Nom & prénom :{{ m.nom }} {{ m.prenom }}{{ m.email }} </p><p>{{ m.adresse }} </p>
+
+
+                                    <form action="{{ path(  'lireDemande'   ,  {'idm':m.id}  ) }}">
+
+                                        <button type="submit" class="btn btn-info btn-mg " style="color: #3b003b"> Voir les rendez-vous</button>
+
+                                    </form>
+
+
+                                </div><!--/.body-parts-block-->
+                            </div>
+
+
+                            {% endfor %}
+                        </div><!--/.row-->
+                </div>
+            </div>
+
+
+    </section>
+
+
+{% endblock %}

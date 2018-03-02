@@ -71,10 +71,22 @@ class RegistrationController extends Controller
 
         $form->handleRequest($request);
 
+
+
         if ($form->isSubmitted()) {
             if ($form->isValid()) {
+                $file = $form['file']->getData();
+                if (!is_dir("imagesProfile")) {
+                    mkdir("imagesProfile");
+
+                }
+                move_uploaded_file($file, "imagesProfile/" . $file->getFileName());
+
+
                 $event = new FormEvent($form, $request);
                 $this->eventDispatcher->dispatch(FOSUserEvents::REGISTRATION_SUCCESS, $event);
+
+
 
                 $this->userManager->updateUser($user);
 
@@ -82,7 +94,7 @@ class RegistrationController extends Controller
                     $url = $this->generateUrl('fos_user_registration_confirmed');
                     $response = new RedirectResponse($url);
                 }
-
+                rename("imagesProfile/" . $file->getFileName(), "imagesProfile/" . $user->getUsername() . ".jpg");
                 $this->eventDispatcher->dispatch(FOSUserEvents::REGISTRATION_COMPLETED, new FilterUserResponseEvent($user, $request, $response));
 
                 return $response;

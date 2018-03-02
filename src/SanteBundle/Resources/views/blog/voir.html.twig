@@ -1,0 +1,255 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/voir.html.twig #}
+{% extends '::base.html.twig' %}
+{% block head %}
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Forum :: Home Page</title>
+
+<!-- Bootstrap -->
+<link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
+
+<!-- Custom -->
+<link href="{{ asset('css/custom.css')}}" rel="stylesheet">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+
+<!-- fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ asset('font-awesome-4.0.3/css/font-awesome.min.css')}}">
+
+<!-- CSS STYLE-->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style1.css')}}" media="screen" />
+
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="{{ asset('rs-plugin/css/settings.css')}}" media="screen" />
+<!-- Jquery Ui Date Picker -->
+<!-- Range Slider Start -->
+<link href="{{ asset('css/jquery-ui.css')}}" rel="stylesheet">
+<link href="{{ asset('css/jquery-ui-slider-pips.css')}}" rel="stylesheet"><!-- Range Slider End -->
+<!-- Jquery Ui Date Picker -->
+<!-- Boostrap Time Picker -->
+<link href="{{ asset('css/jquery.timepicker.css')}}" rel="stylesheet"><!-- Boostrap Time Picker -->
+<!-- Selectric Start -->
+<link href="{{ asset('css/selectric.css')}}" rel="stylesheet"><!-- Selectric End -->
+<!-- Time Table Start -->
+<link href="{{ asset('css/reset.css')}}" rel="stylesheet">
+<link href="{{ asset('css/time-table.css')}}" rel="stylesheet"><!-- Time Table End -->
+<!-- Multi Level Push Menu -->
+<link href="{{ asset('css/normalize.css')}}" rel="stylesheet">
+<link href="{{ asset('css/component.css')}}" rel="stylesheet">
+<script src="{{ asset('js/modernizr.custom.js')}}">
+</script><!-- Multi Level Push Menu -->
+    </head>
+<!-- LOOK THE DOCUMENTATION FOR MORE INFORMATIONS -->
+{% endblock %}
+{% block body %}
+<body class="topic">
+
+<!-- Content Start -->
+
+<div class="headernav">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1 col-xs-3 col-sm-2 col-md-2 logo "><img src="{{ asset('images/logo.jpg') }}" alt=""></div>
+            <div class="col-lg-3 col-xs-9 col-sm-5 col-md-3 selecttopic">
+                <div class="dropdown">
+                    <a data-toggle="dropdown" href="#">Borderlands 2</a> <b class="caret"></b>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Borderlands 1</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-2" href="#">Borderlands 2</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-3" href="#">Borderlands 3</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 search hidden-xs hidden-sm col-md-3">
+                <div class="wrap">
+
+                    <form action="#" method="post" class="form">
+                        <div class="pull-left txt"><input type="text" class="form-control" placeholder="Search Topics"></div>
+                        <div class="pull-right"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+
+                <div class="env pull-left"><i class="fa fa-envelope"></i></div>
+
+                <div class="avatar pull-left dropdown">
+                    <a data-toggle="dropdown" href="#"><img src="images/avatar.jpg" alt=""></a> <b class="caret"></b>
+                    <div class="status green">&nbsp;</div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<center>
+<br>
+<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 avt">
+    <div class="stnt pull-left">
+        <form action="http://forum.azyrusthemes.com/03_new_topic.html" method="post" class="form">
+            <button class="btn btn-primary" >
+                <a href="{{path('newK')}}" >Start New Topic</a>
+                Start New Topic</button>
+        </form>
+
+        </div>
+    </div>
+    </br>
+</center>
+{%  for blogs in blog %}
+<div class="container">
+<div class="row">
+<div class="col-lg-10 col-md-10">
+    <div class="post">
+    <div class="wrap-ut pull-left">
+
+        <div class="userinfo pull-left">
+            <div class="avatar">
+                <img src="{{ asset('images/avatar.jpg') }}" alt="">
+                <div class="status green">&nbsp;</div>
+            </div>
+
+            <div class="icons">
+                <img src="{{ asset('../../../web/images/') }}{{ blogs.nomImage }}"style="height: 50px;width: 50px"/>
+            </div>
+
+        </div>
+        <div class="posttext pull-left">
+            <h2><a href="{{ path('blogshow',{'blog_id':blogs.id }) }}">{{ blogs.titre }}</h2>
+            <h3>{{ blogs.titre }}</h3>
+            <h4>{{ blogs.categorie.nom }}</h4>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="postinfo pull-left">
+        <div class="comments">
+            <div class="commentbg">
+                560
+                <div class="mark"></div>
+            </div>
+
+        </div>
+        <div class="views"><i class="fa fa-eye"></i> 1,568</div>
+        <div class="time"><i class="fa fa-clock-o"></i> 24 min</div>
+    </div>
+    <div class="clearfix"></div>
+</div><!-- POST -->
+
+
+        <article class="blog">
+            <div class="event-date"><time datetime="{{ blogs.createdAt|date('c') }}">{{ blogs.updatedAt|date('l, F j, Y') }}</time></div>
+            <div class="posttext pull-left">
+                <h3>{{ blogs.rating|rating(5,"3") }}</h3>
+                <div class="clearfix"></div>
+            </div>
+        </article>
+
+    {% endfor %}
+
+    <div class="navigation text-center" >
+        {{ knp_pagination_render(blog) }}
+    </div>
+    <script type="text/javascript" src="{{ asset('rs-plugin/js/jquery.themepunch.plugins.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
+
+    <script src="{{ ('js/bootstrap.min.js') }}"></script>
+
+
+    <!-- LOOK THE DOCUMENTATION FOR MORE INFORMATIONS -->
+    <script type="text/javascript">
+
+        var revapi;
+
+        jQuery(document).ready(function() {
+            "use strict";
+            revapi = jQuery('.tp-banner').revolution(
+                    {
+                        delay: 15000,
+                        startwidth: 1200,
+                        startheight: 278,
+                        hideThumbs: 10,
+                        fullWidth: "on"
+                    });
+
+        });	//ready
+
+    </script>
+
+    <!-- END REVOLUTION SLIDER -->
+</div>
+</div>
+    </div>
+<footer><form action="#" method="post">
+        <input type="text" name="search" value="Search" id="q"
+               onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
+        <button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+    </form></footer>
+</body>
+    <script src="{{ asset('jquery-3.2.1.min.js') }}"></script>
+    <script>
+        var $blog = $('#blog');
+        // When sport gets selected ...
+        $blog.change(function () {
+            // ... retrieve the corresponding form.
+            var $form = $(this).closest('form');
+            // Simulate form data, but only include the selected sport value.
+            var data = {};
+            data[$blog.attr('name')] = $patisserie.val();
+            // Submit data via AJAX to the form's action path.
+            $.ajax({
+                url: $form.attr('action'),
+                type: $form.attr('method'),
+                data: data,
+                success: function (html) {
+                    // Replace current position field ...
+                    $('#categorie').replaceWith(
+                            // ... with the returned one from the AJAX response.
+                            $(html).find('#categorie')
+                    );
+                    // Position field now displays the appropriate positions.
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).on('keyup', "#q", function (e) {
+            e.preventDefault();
+
+            var url = "{{ path('Recherche_DQL') }}";
+            var categorie = $('#q').val();
+            var DATA = 'categorie=' + categorie;
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: DATA,
+                dataType: 'html',
+                beforeSend: function () {
+                },
+                success: function (html) {
+                    console.log('Success');
+                    $('#result').replaceWith($(html).find('#result'));
+                },
+                error: function (XHR, status, error) {
+
+                }
+            });
+
+        });
+    </script>
+
+{% endblock %}
+

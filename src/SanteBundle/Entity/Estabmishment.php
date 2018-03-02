@@ -23,10 +23,33 @@ class Estabmishment
     private $id;
 
     /**
+     * @return User
+     */
+    public function getUser()
+    {
+        return $this->User;
+    }
+
+    /**
+     * @param User $User
+     */
+    public function setUser($User)
+    {
+        $this->User = $User;
+    }
+    /**
+     * thread of this comment
+     *
+     * @var User
+     * @ORM\ManyToOne(targetEntity="SanteBundle\Entity\User")
+     */
+    protected $User;
+    /**
      * @var string
      *
      * @ORM\Column(name="Nom", type="string", length=255)
      */
+
     private $nom;
 
     /**

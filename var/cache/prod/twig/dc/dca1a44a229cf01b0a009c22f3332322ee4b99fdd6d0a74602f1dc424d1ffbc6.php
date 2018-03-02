@@ -40,6 +40,6 @@ class __TwigTemplate_7d1f1524c244e98da3a84b9f2997fd551fd2c3b2b2fe56a73f0d2159df9
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "SanteBundle:Default:index.html.twig", "C:\\wamp64\\www\\Sante\\src\\SanteBundle/Resources/views/Default/index.html.twig");
+        return new Twig_Source("", "SanteBundle:Default:index.html.twig", "C:\\wamp64\\www\\SanteInt\\src\\SanteBundle/Resources/views/Default/index.html.twig");
     }
 }

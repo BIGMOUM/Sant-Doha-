@@ -1,0 +1,58 @@
+
+{% block title %}recherche dql une voiture{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <center>
+            <h3>Ajouter une voiture :</h3>
+            <table>
+                <tr>
+                    <td>titre</td>
+                    <td><input type="text" name="titre" id="titre"></td>
+                </tr>
+            </table>
+        </center>
+
+        <table border="3" id="t">
+            <tr style="color: #F5871F"><td>id</td><td>categorie</td>{#<td>dateMiseCirculation</td>#}
+                <td>titre</td>
+                <td>Modele</td>
+                <td>Action</td></tr>
+
+        </table>
+    </div>
+    <script src="{{ asset('jquery-3.2.1.min.js') }}" > // on a importer la biblio JQuery
+
+    </script>
+    <script>
+        $('#categorie').keyup(function () {
+            // on va recuperer la valeur de l'input serie
+            var input=$('#titre').val();
+            $.ajax({
+                type : 'post',
+                url : '{{ path('Recherche_DQL') }}',
+                data : {'titre':input},
+                dataType : 'json',
+                success : function (data) {
+
+                    $.each(data,function (i,e) {
+                        $('#t').append('<tr>'
+                                +'<td>'+e.id+'</td>'
+                                +'<td>'+e.titre+'</td>'
+                                // + '<td>'+e.datems+'</td>'
+                                + '<td>'+e.marque+'</td>'
+                                + '<td>'+e.modele.lib+'</td>'
+                                + '</tr>');
+
+
+                    });
+
+
+                }
+
+            });
+        });
+    </script>
+
+{% endblock %}

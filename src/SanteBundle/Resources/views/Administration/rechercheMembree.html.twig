@@ -1,0 +1,17 @@
+{% for p in membres %}
+    <tr>
+        <td>{{ i.id }}</td>
+        <td>{{ i.username  }}</td>
+        <td></td>
+        {#<td><img  class="avatar"src="{{ asset('imageProfiles/'~i.username ~'.jpg')}}" alt="Avatar"></td>#}
+        <td>{{ i.email  }}</td>
+
+        <td>
+            <a href="{{ path('View_membre',{'id':i.id}) }}" class="btn btn-primary btn-xs"><i
+                        class="fa fa-folder"></i> View </a>
+
+            <a href="{{ path('Supprimer_membre', {'id':i.id}) }}"
+               class="btn btn-danger btn-xs"> <i class="fa fa-trash-o"></i> Delete </a>
+        </td>
+    </tr>
+{% endfor %}

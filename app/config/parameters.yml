@@ -10,3 +10,12 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: ThisTokenIsNotSoSecretChangeIt
+swiftmailer:
+    transport: gmail
+    host: smtp.gmail.com
+    username: hamzagolovkin@gmail.com
+    password: 97518305
+    port: 465
+    disable_delivery: false
+    encryption: ssl
+    auth_mode: login

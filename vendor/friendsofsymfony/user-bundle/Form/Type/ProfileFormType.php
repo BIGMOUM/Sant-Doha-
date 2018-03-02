@@ -15,8 +15,10 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 class ProfileFormType extends AbstractType
@@ -49,18 +51,7 @@ class ProfileFormType extends AbstractType
             $constraintsOptions['groups'] = array(reset($options['validation_groups']));
         }
 
-        $builder->add('current_password', PasswordType::class, array(
-            'label' => 'form.current_password',
-            'translation_domain' => 'FOSUserBundle',
-            'mapped' => false,
-            'constraints' => array(
-                new NotBlank(),
-                new UserPassword($constraintsOptions),
-            ),
-            'attr' => array(
-                'autocomplete' => 'current-password',
-            ),
-        ));
+        ;
     }
 
     /**
@@ -103,6 +94,30 @@ class ProfileFormType extends AbstractType
         $builder
             ->add('username', null, array('label' => 'form.username', 'translation_domain' => 'FOSUserBundle'))
             ->add('email', EmailType::class, array('label' => 'form.email', 'translation_domain' => 'FOSUserBundle'))
-        ;
+            ->add('lastname', null, array('label' => 'form.lastname', 'translation_domain' => 'FOSUserBundle'))
+            ->add('file', FileType::class, array(
+                    'multiple'    => false,
+
+                    'attr' => array(
+                        'accept' => 'image/*',
+
+                    )
+                )
+            )
+
+        ->add('plainPassword', RepeatedType::class, array(
+        'type' => PasswordType::class,
+        'options' => array(
+            'translation_domain' => 'FOSUserBundle',
+            'attr' => array(
+                'autocomplete' => 'new-password',
+            ),
+        ),
+        'first_options' => array('label' => 'password'),
+        'second_options' => array('label' => 'confirm'),
+
+        'invalid_message' => 'fos_user.password.mismatch',
+    ));
+
     }
 }

@@ -1,0 +1,115 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Hospital</title><!-- Favicon -->
+    <link href="{{ asset('images/favicon.ico')}}" rel="icon" type="image/x-icon"><!-- Font Awesome -->
+    <link href="{{ asset('fonts/font-awesome.min.css')}}" rel="stylesheet"><!-- Bootstrap -->
+    <link href="{{ asset('css/bootstrap.css')}}" rel="stylesheet"><!--=== Add By Designer ===-->
+    <link href="{{ asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('fonts/fonts.css')}}" rel="stylesheet"><!-- Yamm Megamenu -->
+    <link href="{{ asset('css/yamm.css')}}" rel="stylesheet"><!-- Animation -->
+    <link href="{{ asset('css/animate.css')}}" rel="stylesheet"><!-- Animation -->
+    <!-- Flat Icon -->
+    <link href="{{ asset('fonts/flaticon.css')}}" rel="stylesheet"><!-- Flat Icon -->
+    <!-- Multi Level Push Menu -->
+    <link href="{{ asset('css/normalize.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/component.css')}}" rel="stylesheet">
+    <script src="{{ asset('js/modernizr.custom.js')}}">
+    </script><!-- Multi Level Push Menu -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link href="{{ asset('js/revslider/settings.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('js/revslider/layers.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('js/revslider/navigation.css')}}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+</head>
+
+{% block body %}
+
+
+    <!-- barre bleu-->
+    <div class="breadcrumb-title clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <div class="breadcrumb-left">
+                        <td><button type="button" class="btn btn-info btn-mg"><a style="color: white" href="{{ path('medcin') }}">Retour</a></button></td>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6">
+                    <div class="breadcrumb-right">
+
+                        <h5> Liste des rendez-Vous</h5>
+
+                    </div>
+
+                </div>
+            </div><!--/.row-->
+        </div>
+    </div><!-- Breadcrumb End -->
+
+    <!-- ancien formulaire -->
+
+
+
+
+
+
+
+
+
+
+    <div class="panel panel panel-primary" style="margin: 100px;">
+        <div class="panel-body">
+
+            <form>
+
+                <table class="table">
+                    <thead class="thead-inverse" style="background-color: #7ED321">
+                    <tr>
+                        <th>Date rendez-vous</th>
+
+                        <th>  Heure rendez-vous </th>
+                        <th>  Etat rendez-vous </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+
+                    </tr>
+                    </thead>
+
+                    {% for m in demande %}
+                        <tr>
+
+                            <td>{{ m.date|date }}</td>
+
+                            <td>{{ m.heure  }}</td>
+                            <td>{{ m.etat  }}</td>
+                            <td><button type="button" class="btn btn-info btn-mg"><a style="color: white" href="{{ path('modifierDemande',{'idm':idm,'id':m.id } ) }}">Modifier</a></button></td>
+                            <td><button type="button" class="btn btn-info btn-mg"><a style="color: white" href="{{ path('supprimerDemande',{'idm':idm,'id':m.id } ) }}">Confirmer</a></button></td>
+                            <td><button type="button" class="btn btn-info btn-mg"><a style="color: white" href="{{ path('supprimerDemande',{'idm':idm,'id':m.id  } ) }}">Delete</a></button></td>
+
+
+
+                        </tr>
+                    {% endfor  %}
+
+                </table>
+
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
+</html>

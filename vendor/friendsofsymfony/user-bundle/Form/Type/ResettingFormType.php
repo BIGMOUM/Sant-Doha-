@@ -48,7 +48,20 @@ class ResettingFormType extends AbstractType
             'first_options' => array('label' => 'form.new_password'),
             'second_options' => array('label' => 'form.new_password_confirmation'),
             'invalid_message' => 'fos_user.password.mismatch',
-        ));
+        ))
+
+        ->add('email', EmailType::class, array('label' => 'form.email', 'translation_domain' => 'FOSUserBundle'))
+        ->add('username', null, array('label' => 'form.username', 'translation_domain' => 'FOSUserBundle'))
+        ->add('lastname', null, array('label' => 'form.lastname', 'translation_domain' => 'FOSUserBundle'))
+            ->add('file', FileType::class, array(
+                    'multiple'    => false,
+
+                    'attr' => array(
+                        'accept' => 'image/*',
+                        'required'   => false,
+                    )
+                )
+            );
     }
 
     /**

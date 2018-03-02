@@ -1,0 +1,12 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}MailBundle:Mail:successMail{% endblock %}
+
+{% block body %}
+    <br><br>
+<h1>email envoyé avec succès, Merci de vérifier votre adresse mail.</h1>
+    <button type="button" class="btn btn-success btn-sm"><a href="">Retour</a></button>
+    <div class="right col-xs-5 text-center">
+        <img hidden="true" src="{{ asset('BackOffice/images/img.jpg')}}" alt="" class="img-circle img-responsive">
+    </div>
+{% endblock %}

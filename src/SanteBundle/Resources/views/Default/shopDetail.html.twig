@@ -1,0 +1,115 @@
+{% extends "::base.html.twig" %}
+{% block title %}SHOPDETAIL{% endblock %}
+
+{% block head %}
+    <link href="css/jquery.fancybox.css" rel="stylesheet"><!-- Fancy Box End -->
+{% endblock %}
+
+{% block body %}
+
+    <section class="content inner-pg shop-pg shop-product-pg clearfix">
+        <!-- Breadcrumb Start -->
+        <div class="breadcrumb-title clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                        <div class="breadcrumb-left">
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="index-2.html">HOME</a>
+                                </li>
+                                <li>
+                                    <a href="shop.html">Shop</a>
+                                </li>
+                                <li>
+                                    <a href="shop.html">Vitamins & Supplements</a>
+                                </li>
+                                <li class="active">DiamondClean Rechargeable Electric Toothbrush</li>
+                            </ol><!--/.breadcrumb-->
+                        </div><!--/.breadcrumb-left-->
+                    </div><!--/.col-sm-6 col-md-6-->
+                    <div class="col-sm-6 col-md-6">
+                        <div class="breadcrumb-right">
+                            <h5>Shop</h5>
+                        </div>
+                    </div><!--/.col-sm-6 col-md-6"-->
+                </div><!--/.row-->
+            </div><!--/.container-->
+        </div><!-- Breadcrumb End -->
+
+
+        <!-- Product Items Detail Start -->
+        <div class="product-items-detail clearfix">
+            <div class="col-sm-12 col-md-6 col-lg-6 padding">
+                <div class="left-side">
+                    <a class="image fancybox" data-fancybox-group="gallery"
+                       href="{{ asset('images1/'~produit.nom ~'.jpg') }}"><img id="img" alt="IMAGE"
+                                                                               class="img-responsive"
+                                                                               src="{{ asset('images1/'~produit.nom ~'.jpg') }}"></a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 padding">
+                <div class="right-side">
+                    <h4>{{ produit.nom }}</h4>
+                    <div class="product-categories">
+                        <span>Prix:</span> <h5>${{ produit.prix }}</h5>
+
+                        <div class="product-categories">
+                            <span>Catégorie:</span> {{ produit.categorie }}
+                        </div>
+                        <div class="product-categories">
+                            <span>Description:</span> {{ produit.description }}
+                        </div>
+                        <div class="quantity clearfix">
+                            <input id="qte" class="form-control" min="1" name="text" size="4" step="1" type="number"
+                                   value="1">
+                            <a id="addCart" class="btn btn-default" href="#" role="button">Add To Cart</a>
+
+                        </div>
+                        <div class="col-md-6 col-md-offset-3">
+
+                        </div>
+
+                    </div><!--/.right-side-->
+                </div><!--/.col-sm-12 col-md-6 col-lg-6 padding-->
+            </div><!-- Product Items Detail End -->
+
+
+        </div>
+    </section><!-- Content End -->
+
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script>
+        $('#addCart').on('click', function () {
+            addToCart({{ produit.id }}, $('#qte').val());
+        });
+
+        function addToCart(id, qte) {
+
+        $('#load').show();
+            $.ajax({
+                url: '{{ path('ajouter_au_panier') }}',
+                type: 'POST',
+                data: {
+                    'id': id,
+                    'qte': qte
+                },
+                success: function (data) {
+                    $('#load').hide();
+                    renderCart();
+                    $('.header-cart').effect('shake');
+
+
+                }
+            });
+
+        }
+
+
+    </script>
+
+{% endblock %}

@@ -12,10 +12,9 @@ security:
         FOS\UserBundle\Model\UserInterface: bcrypt
 
     role_hierarchy:
-        ROLE_MEMBRE:       ROLE_USER
+        ROLE_MEMBRE:       ROLE_MEMBRE
         ROLE_DOCTOR:       ROLE_USER
         ROLE_ADMIN:        ROLE_ADMIN
-        ROLE_SUPER_ADMIN:  ROLE_ADMIN
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -38,9 +37,9 @@ security:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/admin$, role: ROLE_ADMIN }
-        - { path: ^/login$, role: ROLE_MEMBRE }
-        - { path: ^/login$, role: ROLE_DOCTOR }
+        - { path: ^/admin, role: ROLE_ADMIN }
+        - { path: ^/, role: ROLE_USER }
+        - { path: ^/, role: ROLE_DOCTOR }
             # activate different ways to authenticate
 
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate

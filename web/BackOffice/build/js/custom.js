@@ -1103,7 +1103,7 @@ if (typeof NProgress != 'undefined') {
             console.log("error uploading file", reason, detail);
           }
           $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>' +
-            '<strong>File uploads error</strong> ' + msg + ' </div>').prependTo('#alerts');
+            '<strong>File upload error</strong> ' + msg + ' </div>').prependTo('#alerts');
         }
 
        $('.editor-wrapper').each(function(){

@@ -8,6 +8,7 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    images_directory: '%kernel.project_dir%/web/uploads/images'
 
 
 framework:
@@ -97,3 +98,12 @@ knp_paginator:
         pagination: '@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig'     # sliding pagination controls template
         sortable: '@KnpPaginator/Pagination/sortable_link.html.twig' # sort link template
         filtration: '@KnpPaginator/Pagination/filtration.html.twig'  # filters template
+# KNP paginator
+knp_snappy:
+    pdf:
+        enabled:    true
+        binary:    "\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe\""
+        options:    []
+
+mgilet_notification:
+    notification_class: SanteBundle\Entity\Notification # default value is AppBundle\Entity\Notification

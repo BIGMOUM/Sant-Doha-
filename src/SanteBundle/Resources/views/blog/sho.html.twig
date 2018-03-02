@@ -1,0 +1,24 @@
+
+
+{% block body %}
+
+    <article class="blog">
+        <header>
+
+            <div class="date"><time datetime="{{ blog.createdAt|date('c') }}">{{ blog.updatedAt|date('l, F j, Y') }}</time></div>
+            <h2>{{ blog.titre }}</h2>
+        </header>
+        <td>
+            <img src="{{ asset('../../../web/images/') }}{{ blog.nomImage }}"style="height: 50px;width: 50px"/>
+
+        </td>
+        <section class="comments" id="comments">
+            <section class="previous-comments">
+                {% include 'SanteBundle:Comment:show.html.twig' with { 'comments':comments } %}
+        </section>
+
+            </section>
+    </article>
+
+{% endblock %}
+

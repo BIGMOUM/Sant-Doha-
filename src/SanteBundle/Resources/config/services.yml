@@ -5,3 +5,9 @@ services:
   redirect.after.login:
       class: SanteBundle\Redirection\AfterLoginRedirection
       arguments: ["@router"]
+
+# config/services.yaml
+
+# ...
+parameters:
+    brochures_directory: '%kernel.project_dir%/public/uploads/images'

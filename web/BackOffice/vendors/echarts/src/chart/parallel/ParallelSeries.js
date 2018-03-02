@@ -39,7 +39,7 @@ define(function(require) {
         },
 
         /**
-         * User can get data raw indices on 'axisAreaSelected' event received.
+         * UserController can get data raw indices on 'axisAreaSelected' event received.
          *
          * @public
          * @param {string} activeState 'active' or 'inactive' or 'normal'

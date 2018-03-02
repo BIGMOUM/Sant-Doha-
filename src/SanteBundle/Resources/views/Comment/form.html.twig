@@ -1,0 +1,130 @@
+{% block head %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Comment :: Add Page</title>
+
+        <!-- Bootstrap -->
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+        <!-- Custom -->
+        <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ asset('font-awesome-4.0.3/css/font-awesome.min.css') }}">
+
+        <!-- CSS STYLE-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" media="screen" />
+
+        <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('web/css/settings.css') }}" media="screen" />
+
+    </head>
+{% endblock %}
+{% block body %}
+<body>
+<body>
+<div class="headernav">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1 col-xs-3 col-sm-2 col-md-2 logo "><img src="{{ asset('images/logo.jpg') }}" alt=""></div>
+            <div class="col-lg-3 col-xs-9 col-sm-5 col-md-3 selecttopic">
+                <div class="dropdown">
+                    <a data-toggle="dropdown" href="#">Borderlands 2</a> <b class="caret"></b>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Borderlands 1</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-2" href="#">Borderlands 2</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-3" href="#">Borderlands 3</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-xs-12 col-sm-5 col-md-4 avt">
+                <div class="stnt pull-left">
+
+                    <button class="btn btn-primary" >
+                        <a href="{{path('newK')}}" >Start New Topic</a>
+                    </button>
+                </div>
+                <div class="env pull-left"><i class="fa fa-envelope"></i></div>
+
+                <div class="avatar pull-left dropdown">
+                    <a data-toggle="dropdown" href="#"><img src="images/avatar.jpg" alt=""></a> <b class="caret"></b>
+                    <div class="status green">&nbsp;</div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 breadcrumbf">
+                <a href="vi">Home Page</a> <span class="diviver">&gt;</span>  <span class="diviver">&gt;</span> <a href="http://forum.azyrusthemes.com/03_new_topic.html#">New Topic</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8">
+
+                {{ form_start(form) }}
+
+                <!-- POST -->
+                <div class="post">
+                    <form action="http://forum.azyrusthemes.com/03_new_topic.html#" class="form newtopic" method="post">
+                        <div class="topwrap">
+                            <div class="userinfo pull-left">
+                                <div class="avatar">
+                                    <img src="http://forum.azyrusthemes.com/images/avatar4.jpg" alt="">
+                                    <div class="status red">&nbsp;</div>
+                                </div>
+
+                                <div class="icons">
+                                    <img src="http://forum.azyrusthemes.com/images/icon3.jpg" alt=""><img src="http://forum.azyrusthemes.com/images/icon4.jpg" alt=""><img src="http://forum.azyrusthemes.com/images/icon5.jpg" alt=""><img src="http://forum.azyrusthemes.com/images/icon6.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="posttext pull-left">
+
+
+{{ form_start(form) }}
+                            <h2>Post Comment</h2>
+<div>
+    {{ form_widget(form.comment, { 'attr': {'class':'form-control'}}) }}
+</div>
+                            <div>
+                             <h3>Rating</h3>   {{ form_widget(form.rating, { 'attr': {'class':'form-control'}}) }}
+                            </div>
+                            <div><div class="pull-right postreply">
+                                    <a href="{{  path('Voir')}}">Back</a>
+
+                                     </div>
+<div>{{ form_widget(form.submit) }}</div>
+                            </div>
+
+
+{{ form_end(form) }}
+</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+ {% endblock %}

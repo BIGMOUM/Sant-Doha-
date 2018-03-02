@@ -10,4 +10,12 @@ namespace SanteBundle\Repository;
  */
 class EstabmishmentRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function searchByNom($s)
+    {
+        $q = $this->getEntityManager()
+            ->createQuery("SELECT p FROM SanteBundle:Estabmishment p WHERE p.nom LIKE :n")->setParameter('n', '%' . $s . '%');
+
+        return $q->getResult();
+
+    }
 }

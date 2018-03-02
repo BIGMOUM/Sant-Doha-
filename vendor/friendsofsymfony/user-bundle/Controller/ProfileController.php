@@ -85,6 +85,18 @@ class ProfileController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $file = $Form['file']->getData();
+            if ($file) {
+                $file = $Form['file']->getData();
+                if (!is_dir("imagesProfile")) {
+                    mkdir("imagesProfile");
+
+                }
+                move_uploaded_file($file, "imagesProfile/" . $file->getFileName());
+                rename("imagesProfile/" . $file->getFileName(), "imagesProfile/" . $user->getUsername() . ".jpg");
+
+            }
             $event = new FormEvent($form, $request);
             $this->eventDispatcher->dispatch(FOSUserEvents::PROFILE_EDIT_SUCCESS, $event);
 
@@ -102,6 +114,7 @@ class ProfileController extends Controller
 
         return $this->render('@FOSUser/Profile/edit.html.twig', array(
             'form' => $form->createView(),
+            'user' => $user
         ));
     }
 }

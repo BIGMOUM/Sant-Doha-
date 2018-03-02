@@ -19,6 +19,10 @@ class ComposerStaticInite21ccfc423c28a0b674eb436b1750b1b
     );
 
     public static $prefixLengthsPsr4 = array (
+        'Z' => 
+        array (
+            'Zend\\Json\\' => 10,
+        ),
         'V' => 
         array (
             'Vich\\UploaderBundle\\' => 20,
@@ -56,6 +60,10 @@ class ComposerStaticInite21ccfc423c28a0b674eb436b1750b1b
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
         ),
+        'O' => 
+        array (
+            'Ob\\HighchartsBundle\\' => 20,
+        ),
         'M' => 
         array (
             'Monolog\\' => 8,
@@ -63,6 +71,7 @@ class ComposerStaticInite21ccfc423c28a0b674eb436b1750b1b
         ),
         'K' => 
         array (
+            'Knp\\Bundle\\SnappyBundle\\' => 24,
             'Knp\\Bundle\\PaginatorBundle\\' => 27,
         ),
         'I' => 
@@ -89,6 +98,10 @@ class ComposerStaticInite21ccfc423c28a0b674eb436b1750b1b
     );
 
     public static $prefixDirsPsr4 = array (
+        'Zend\\Json\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-json/src',
+        ),
         'Vich\\UploaderBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/vich/uploader-bundle',
@@ -189,6 +202,10 @@ class ComposerStaticInite21ccfc423c28a0b674eb436b1750b1b
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
         ),
+        'Ob\\HighchartsBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ob/highcharts-bundle',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -196,6 +213,10 @@ class ComposerStaticInite21ccfc423c28a0b674eb436b1750b1b
         'Mgilet\\NotificationBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/mgilet/notification-bundle',
+        ),
+        'Knp\\Bundle\\SnappyBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-snappy-bundle',
         ),
         'Knp\\Bundle\\PaginatorBundle\\' => 
         array (
@@ -274,6 +295,10 @@ class ComposerStaticInite21ccfc423c28a0b674eb436b1750b1b
         ),
         'K' => 
         array (
+            'Knp\\Snappy' => 
+            array (
+                0 => __DIR__ . '/..' . '/knplabs/knp-snappy/src',
+            ),
             'Knp\\Component' => 
             array (
                 0 => __DIR__ . '/..' . '/knplabs/knp-components/src',

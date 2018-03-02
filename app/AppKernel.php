@@ -22,6 +22,8 @@ class AppKernel extends Kernel
             new Mgilet\NotificationBundle\MgiletNotificationBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Ob\HighchartsBundle\ObHighchartsBundle(),
+            new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

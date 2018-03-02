@@ -79,14 +79,49 @@ class LocateController extends Controller
         return $this->render("SanteBundle:Administration:Updatelocate.html.twig",
             array('form'=>$Form->createView(),"estab"=>$estab));
     }
+    function LocateDetailAction($id)
+    {
+
+        $em=$this->getDoctrine()->getManager();
+        $estab=$em->getRepository("SanteBundle:Estabmishment")->find($id);
+
+        return $this->render("SanteBundle:Default:locateDetail.html.twig",
+            array("estab"=>$estab ));
+    }
+    /**
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
     public function DeleteLocateAdminAction($id)
     {
         $em=$this->getDoctrine()->getManager();
 
         $estab=$em->getRepository("SanteBundle:Estabmishment")->find($id);
+        $manager = $this->get('mgilet.notification');
+
+        $guest= $estab->getUser()->getUsername();
+        $nom= $estab->getNom();
+        $address= $estab->getAdress();
+
+        $notif = $manager->generateNotification('Problem with the establishment ' .$guest);
+        $notif->setMessage('The establishment that you added named '.$nom.' and locate at '.$address.' was deleted by our admins.');
+        $manager->addNotification($estab->getUser(), $notif);
+
         $em->remove($estab);
         $em->flush();
 
         return $this->redirectToRoute('sante_AdminLocate');
+    }
+    public function RechercheLocateAction(Request $request)
+    {
+
+        $nom = $request->get('NameSearch');
+        $em = $this->get('doctrine.orm.default_entity_manager');
+        $searchResult = $em->getRepository('SanteBundle:Estabmishment')->searchByNom($nom);
+
+        return $this->render('@Sante/Default/rechercheLocate.html.twig', array('estabmishment' =>$searchResult
+
+        ));
+
     }
 }

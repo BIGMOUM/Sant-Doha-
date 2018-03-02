@@ -12,7 +12,10 @@
 namespace FOS\UserBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -41,7 +44,11 @@ class RegistrationFormType extends AbstractType
         $builder
             ->add('email', EmailType::class, array('label' => 'form.email', 'translation_domain' => 'FOSUserBundle'))
             ->add('username', null, array('label' => 'form.username', 'translation_domain' => 'FOSUserBundle'))
-            ->add('plainPassword', RepeatedType::class, array(
+            ->add('lastname', null, array('label' => 'form.lastname', 'translation_domain' => 'FOSUserBundle'))
+
+
+
+        ->add('plainPassword', RepeatedType::class, array(
                 'type' => PasswordType::class,
                 'options' => array(
                     'translation_domain' => 'FOSUserBundle',
@@ -49,11 +56,32 @@ class RegistrationFormType extends AbstractType
                         'autocomplete' => 'new-password',
                     ),
                 ),
-                'first_options' => array('label' => 'form.password'),
-                'second_options' => array('label' => 'form.password_confirmation'),
+                'first_options' => array('label' => 'password'),
+                'second_options' => array('label' => 'confirm'),
+
                 'invalid_message' => 'fos_user.password.mismatch',
             ))
-        ;
+
+            ->add('roles', CollectionType::class, array(
+                'entry_type'   => ChoiceType::class,
+                'entry_options'  => array(
+                    'choices'  => array(
+                        'MEMBRE' =>'ROLE_MEMBRE',
+                        'DOCTOR'  => 'ROLE_DOCTOR',
+
+                    ),
+                ),
+            ))
+
+            ->add('file', FileType::class, array(
+                    'multiple'    => false,
+
+                    'attr' => array(
+                        'accept' => 'image/*',
+                        'required'   => false,
+                    )
+                )
+            );
     }
 
     /**

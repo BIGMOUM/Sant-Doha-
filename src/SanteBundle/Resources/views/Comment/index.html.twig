@@ -1,0 +1,57 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    {% for comment in comments %}
+
+        <section class="content">
+        <div class="container">
+            <div class="row">
+<div class="post">
+
+    <div class="topwrap">
+        <div class="userinfo pull-left">
+            <div class="avatar">
+{{ comment.UserId }}                <div class="status red">&nbsp;</div>
+            </div>
+
+            <div class="icons">
+                <img src="images/icon3.jpg" alt=""><img src="images/icon4.jpg" alt=""><img src="images/icon5.jpg" alt=""><img src="images/icon6.jpg" alt="">
+            </div>
+        </div>
+        <div class="posttext pull-left">
+
+
+{{ comment.comment }}        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="postinfobot">
+        {{ comment.rating|rating(5,"3") }}
+
+        <div class="likeblock pull-left">
+            <a href="#" class="up"><i class="fa fa-thumbs-o-up"></i>55</a>
+            <a href="#" class="down"><i class="fa fa-thumbs-o-down"></i>12</a>
+        </div>
+
+        <div class="prev pull-left">
+            <a href="#"><i class="fa fa-reply"></i></a>
+        </div>
+
+        <div class="posted pull-left"><i class="fa fa-clock-o"></i> {{ comment.createdAt|date('d-m-Y H:i:s') }}</div>
+        <div class="next pull-right">
+            <a href="#"><i class="fa fa-share"></i></a>
+
+            <a href="#"><i class="fa fa-flag"></i></a>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+{% endfor %}
+
+        <a href="{{ path('neW',{'blog_id':blog.id})}}"> addd </a>
+
+    <a href="{{ path('Voir') }}">Home Page</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
